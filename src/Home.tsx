@@ -43,9 +43,9 @@ const Home = () => {
               </Link>
             </div>
             <div className="flex gap-8">
+              <Link to="/" className="text-color-white-solid text-xl font-medium font-Quicksand hover:opacity-70 transition-opacity" style={{color: '#D2691E'}}>Home</Link>
               <Link to="/" className="text-color-white-solid text-xl font-medium font-Quicksand hover:opacity-70 transition-opacity">About Us</Link>
               <Link to="/menu" className="text-color-white-solid text-xl font-medium font-Quicksand hover:opacity-70 transition-opacity">Menu</Link>
-              <div className="text-color-white-solid text-xl font-medium font-Quicksand">Gallery</div>
               <div className="text-color-white-solid text-xl font-medium font-Quicksand">Contact</div>
             </div>
           </div>
@@ -219,7 +219,6 @@ const Home = () => {
                 <div className="space-y-4">
                   <Link to="/" className="block text-color-white-solid text-xl font-normal font-Quicksand border-b border-white pb-2 leading-relaxed hover:opacity-70 transition-opacity">Our Story</Link>
                   <Link to="/menu" className="block text-color-white-solid text-xl font-normal font-Quicksand border-b border-white pb-2 leading-relaxed hover:opacity-70 transition-opacity">Our Menu</Link>
-                  <div className="text-color-white-solid text-xl font-normal font-Quicksand border-b border-white pb-2 leading-relaxed">Gallery</div>
                   <div className="text-color-white-solid text-xl font-normal font-Quicksand border-b border-white pb-2 leading-relaxed">Contact</div>
                 </div>
               </div>

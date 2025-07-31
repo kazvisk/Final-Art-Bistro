@@ -3,6 +3,40 @@
   text-align: center;
 }
 
+/* Menu item dotted line styles */
+.menu-item-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu-item-name {
+  background: white;
+  padding-right: 8px;
+  z-index: 2;
+  position: relative;
+}
+
+.menu-item-price {
+  background: white;
+  padding-left: 8px;
+  z-index: 2;
+  position: relative;
+}
+
+.menu-item-dots {
+  flex: 1;
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #6b7280 0px,
+    #6b7280 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  margin: 0 4px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .text-7xl {
