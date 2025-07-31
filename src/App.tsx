@@ -1,7 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  // Reviews data
+  const reviews = [
+    {
+      text: "The Art Bistro is my favorite place to work and relax. The coffee is exceptional, and the artistic atmosphere is truly inspiring. I love how they showcase local artists!",
+      author: "Sarah M., Local Artist",
+      rating: "★★★★★"
+    },
+    {
+      text: "Amazing coffee and such a creative environment! The baristas are knowledgeable and the pastries are freshly made daily. It's become my go-to spot for meetings.",
+      author: "Michael R., Entrepreneur",
+      rating: "★★★★★"
+    },
+    {
+      text: "What a gem! The atmosphere is perfect for studying, and their specialty drinks are incredible. The rotating art exhibitions keep it fresh and interesting every visit.",
+      author: "Emma L., Graduate Student",
+      rating: "★★★★★"
+    }
+  ];
+
+  const [currentReview, setCurrentReview] = useState(0);
+
+  const nextReview = () => {
+    setCurrentReview((prev) => (prev + 1) % reviews.length);
+  };
+
+  const prevReview = () => {
+    setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
+  };
   return (
     <div className="relative bg-neutral-700">
       <div className="w-full min-h-screen bg-color-white-solid">
@@ -101,35 +129,60 @@ function App() {
           </div>
           
           {/* Reviews Carousel Container */}
-          <div className="relative w-full max-w-4xl mx-auto">
-            <div className="bg-gradient-amber-light rounded-lg p-8" style={{minHeight: '300px'}}>
+          <div className="relative w-full max-w-4xl mx-auto" style={{marginTop: '2rem'}}>
+            <div className="bg-white rounded-lg p-8" style={{minHeight: '300px', border: '2px solid black', position: 'relative', paddingBottom: '60px'}}>
               <div className="text-center">
-                <div className="text-6xl mb-4" style={{color: '#92400e'}}>"</div>
-                <div className="text-xl font-normal font-Quicksand mb-6" style={{color: '#92400e'}}>
-                  "The Art Bistro is my favorite place to work and relax. The coffee is exceptional, and the artistic atmosphere is truly inspiring. I love how they showcase local artists!"
+                <div className="text-6xl mb-4 text-black">"</div>
+                <div className="text-xl font-normal font-Quicksand mb-6 text-black">
+                  "{reviews[currentReview].text}"
                 </div>
                 <div className="flex items-center justify-center gap-1 mb-4">
-                  <span style={{color: '#D2691E'}}>★★★★★</span>
+                  <span className="text-black">{reviews[currentReview].rating}</span>
                 </div>
-                <div className="text-lg font-medium font-Ovo" style={{color: '#92400e'}}>
-                  - Sarah M., Local Artist
+                <div className="text-lg font-medium font-Ovo text-black">
+                  - {reviews[currentReview].author}
                 </div>
               </div>
-            </div>
-            
-            {/* Reviews Carousel Navigation */}
-            <div className="flex justify-center mt-6 gap-4">
-              <button className="bg-color-grey-13 text-color-white-solid px-6 py-2 rounded-lg font-Quicksand hover:bg-opacity-80 transition-all">
-                ← Previous
-              </button>
-              <div className="flex gap-2 items-center">
-                <div className="w-3 h-3 bg-color-grey-13 rounded-full"></div>
-                <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
-                <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
+              
+              {/* Bottom navigation container - absolutely positioned at bottom */}
+              <div className="flex items-center justify-center gap-8" style={{position: 'absolute', bottom: '16px', left: '0', right: '0'}}>
+                {/* Left Arrow */}
+                <button 
+                  onClick={prevReview}
+                  className="transition-all hover:opacity-70" 
+                  style={{background: 'none', border: 'none', padding: '0', cursor: 'pointer'}}
+                >
+                  <span className="text-black" style={{fontSize: '24px', fontWeight: 'bold'}}>‹</span>
+                </button>
+                
+                {/* Dot indicators */}
+                <div className="flex justify-center items-center gap-4">
+                  {reviews.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentReview(index)}
+                      className="rounded-full transition-all hover:opacity-70"
+                      style={{
+                        width: index === currentReview ? '12px' : '7px', 
+                        height: index === currentReview ? '12px' : '7px', 
+                        backgroundColor: 'black',
+                        border: 'none',
+                        padding: '0',
+                        cursor: 'pointer'
+                      }}
+                    />
+                  ))}
+                </div>
+                
+                {/* Right Arrow */}
+                <button 
+                  onClick={nextReview}
+                  className="transition-all hover:opacity-70" 
+                  style={{background: 'none', border: 'none', padding: '0', cursor: 'pointer'}}
+                >
+                  <span className="text-black" style={{fontSize: '24px', fontWeight: 'bold'}}>›</span>
+                </button>
               </div>
-              <button className="bg-color-grey-13 text-color-white-solid px-6 py-2 rounded-lg font-Quicksand hover:bg-opacity-80 transition-all">
-                Next →
-              </button>
             </div>
           </div>
         </div>
