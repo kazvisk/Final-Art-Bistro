@@ -5,60 +5,31 @@ function App() {
   return (
     <div className="relative bg-neutral-700">
       <div className="w-full min-h-screen bg-color-white-solid">
-        {/* Header Banner */}
-        <div className="w-full px-20 bg-color-grey-95 flex flex-col">
-          <div className="w-full py-4 flex justify-center items-center">
-            <div className="flex items-center gap-4">
-              <div className="w-8 h-8 flex justify-center items-center">
-                <div className="w-6 h-6 bg-color-spring-green-19 rounded"></div>
-              </div>
-              <div className="w-8 h-8 flex justify-center items-center">
-                <div className="w-6 h-6 bg-color-spring-green-19 rounded"></div>
-              </div>
-              <div className="w-8 h-8 flex justify-center items-center">
-                <div className="w-6 h-6 bg-color-spring-green-19 rounded"></div>
-              </div>
-            </div>
-            <div className="flex-1 text-center">
-              <div className="text-color-spring-green-19 text-sm font-Quicksand font-normal">
-                ORDER BY MIDDAY FOR NEXT DAY DISPATCH OR COLLECTION
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Navigation */}
-        <div className="w-full bg-color-grey-13">
-          <div className="px-20 py-4 flex justify-between items-center">
+        <div className="w-full bg-color-white-solid" style={{height: '120px'}}>
+          <div className="px-20 h-full flex justify-between items-center">
             <div className="flex items-center">
-              <div className="text-color-white-solid text-2xl font-bold font-Ovo">Art Bistro</div>
+              <div className="text-color-black-solid text-2xl font-bold font-Ovo">The Art Bistro</div>
             </div>
-            <div className="flex gap-4">
-              <div className="btn btn-outline px-12 py-3">
-                <div className="text-color-white-solid text-xl font-medium font-Quicksand">Account</div>
-              </div>
-              <div className="btn btn-white px-12 py-3">
-                <div className="text-color-black-solid text-xl font-medium font-Quicksand">$0.00 (0)</div>
-              </div>
-            </div>
-          </div>
-          <div className="px-20 py-4 border-b border-white opacity-40">
             <div className="flex gap-8">
-              <div className="text-color-white-solid text-xl font-medium font-Quicksand">About Us</div>
-              <div className="text-color-white-solid text-xl font-medium font-Quicksand">Menu</div>
-              <div className="text-color-white-solid text-xl font-medium font-Quicksand">Gallery</div>
-              <div className="text-color-white-solid text-xl font-medium font-Quicksand">Contact</div>
+              <div className="text-color-black-solid text-xl font-medium font-Quicksand">About Us</div>
+              <div className="text-color-black-solid text-xl font-medium font-Quicksand">Menu</div>
+              <div className="text-color-black-solid text-xl font-medium font-Quicksand">Gallery</div>
+              <div className="text-color-black-solid text-xl font-medium font-Quicksand">Contact</div>
             </div>
           </div>
         </div>
 
         {/* Hero Section */}
-        <div className="relative w-full hero-bg overflow-hidden" style={{height: '514px'}}>
-          <div className="hero-overlay absolute inset-0"></div>
+        <div className="relative w-full overflow-hidden" style={{
+          height: '514px',
+          backgroundColor: '#8B4513'
+        }}>
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="relative z-10 w-full h-full flex justify-center items-center px-20">
             <div className="text-center">
-              <div className="text-color-white-solid text-7xl font-normal font-Ovo mb-8">
-                Welcome to Art Bistro
+              <div className="text-color-white-solid text-7xl font-normal font-Ovo" style={{marginBottom: '2.5rem'}}>
+                Welcome to The Art Bistro
               </div>
               <div className="btn btn-white px-12 py-4">
                 <div className="text-color-black-solid text-xl font-normal font-Quicksand">Explore Menu</div>
