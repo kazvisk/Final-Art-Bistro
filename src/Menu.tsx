@@ -4,26 +4,34 @@ import { Link } from 'react-router-dom';
 const Menu = () => {
   const menuItems = {
     coffee: [
-      { name: "Art House Blend", price: "$4.50", description: "Our signature medium roast with notes of chocolate and caramel" },
-      { name: "Creative Cappuccino", price: "$5.25", description: "Classic cappuccino with beautiful latte art" },
-      { name: "Inspiration Latte", price: "$5.75", description: "Rich espresso with steamed milk and your choice of syrup" },
-      { name: "Gallery Cold Brew", price: "$4.75", description: "Smooth cold brew coffee, perfect for contemplation" },
-      { name: "Palette Pour Over", price: "$6.00", description: "Single origin coffee brewed to perfection" },
-      { name: "Mocha Masterpiece", price: "$6.25", description: "Espresso, steamed milk, and rich chocolate" }
+      { name: "House Coffee", prices: { small: "$2.00", medium: "$2.25", large: "$2.50" }, description: "Our signature house blend coffee" },
+      { name: "Cafe au Lait", prices: { small: "$2.25", medium: "$2.50", large: "$2.75" }, description: "Coffee with steamed milk, French style" },
+      { name: "Espresso", prices: { small: "$2.00", medium: "$2.50", large: null }, description: "Pure espresso shot, rich and bold" },
+      { name: "Espresso Con Panna", prices: { small: "$2.50", medium: "$3.00", large: null }, description: "Espresso topped with whipped cream" },
+      { name: "Macchiato", prices: { small: "$2.50", medium: "$2.75", large: null }, description: "Espresso with a dollop of steamed milk foam" },
+      { name: "Cappuccino", prices: { small: "$3.50", medium: "$3.75", large: "$4.00" }, description: "Equal parts espresso, steamed milk, and foam" },
+      { name: "Cafe Latte", prices: { small: "$3.25", medium: "$3.75", large: "$4.00" }, description: "Espresso with steamed milk and light foam" },
+      { name: "Vanilla Latte", prices: { small: "$3.50", medium: "$4.00", large: "$4.25" }, description: "Cafe latte with vanilla syrup" },
+      { name: "Caramel Macchiato", prices: { small: "$3.50", medium: "$4.00", large: "$4.25" }, description: "Vanilla latte with caramel drizzle" },
+      { name: "Cafe Mocha", prices: { small: "$3.50", medium: "$4.00", large: "$4.25" }, description: "Espresso with chocolate and steamed milk" },
+      { name: "White Chocolate Mocha", prices: { small: "$3.50", medium: "$4.00", large: "$4.25" }, description: "Mocha made with white chocolate" },
+      { name: "Americano", prices: { small: "$2.50", medium: "$2.75", large: "$3.00" }, description: "Espresso with hot water" },
+      { name: "Depth Charge", prices: { small: "$3.00", medium: "$3.25", large: "$3.50" }, description: "Coffee with an extra shot of espresso" }
     ],
     uncoffees: [
-      { name: "Golden Turmeric Latte", price: "$5.50", description: "Creamy turmeric blend with coconut milk and warming spices" },
-      { name: "Matcha Zen", price: "$5.25", description: "Premium ceremonial grade matcha with steamed milk" },
-      { name: "Chocolate Dreams", price: "$4.75", description: "Rich hot chocolate made with Belgian cocoa" },
-      { name: "Vanilla Chai", price: "$4.95", description: "Aromatic chai spices with steamed milk and vanilla" },
-      { name: "London Fog", price: "$4.85", description: "Earl Grey tea with steamed milk and vanilla syrup" }
+      { name: "Hot Chocolate Fantasia", prices: { small: "$3.25", medium: "$3.50", large: "$3.75" }, description: "Rich hot chocolate with whipped cream and chocolate shavings" },
+      { name: "Steamed Hot Chocolate", prices: { small: "$3.25", medium: "$3.50", large: "$3.75" }, description: "Classic hot chocolate made with steamed milk" },
+      { name: "Hot Spiced Milk", prices: { small: "$2.75", medium: "$3.00", large: "$3.25" }, description: "Warm milk with aromatic spices" },
+      { name: "Steamed Milk (plain)", prices: { small: "$2.50", medium: "$2.75", large: "$3.00" }, description: "Simple steamed milk, perfect for soothing" },
+      { name: "Hot Spiced Cider", prices: { small: null, medium: "$2.50", large: null }, description: "Warm apple cider with seasonal spices" },
+      { name: "Chai Latte", prices: { small: "$3.50", medium: "$3.75", large: "$4.00" }, description: "Spiced tea blend with steamed milk" },
+      { name: "Milk", prices: { small: "$2.00", medium: "$2.25", large: "$2.50" }, description: "Fresh cold milk" }
     ],
     frappes: [
-      { name: "Caramel Canvas", price: "$6.50", description: "Blended coffee with caramel and whipped cream" },
-      { name: "Mocha Marble", price: "$6.75", description: "Chocolate and coffee blend with ice and cream" },
-      { name: "Vanilla Sketch", price: "$6.25", description: "Smooth vanilla coffee frappe with artistic swirls" },
-      { name: "Berry Brushstroke", price: "$6.95", description: "Mixed berry and cream frappe with a coffee twist" },
-      { name: "Mint Masterpiece", price: "$6.45", description: "Refreshing mint chocolate chip coffee blend" }
+      { name: "Coffee", prices: { small: "$4.00", medium: "$4.50", large: null }, description: "Classic blended coffee frappe with ice" },
+      { name: "Mocha", prices: { small: "$4.00", medium: "$4.50", large: null }, description: "Chocolate and coffee blended with ice and cream" },
+      { name: "Vanilla Latte", prices: { small: "$4.00", medium: "$4.50", large: null }, description: "Vanilla-flavored coffee frappe" },
+      { name: "Caramel Latte", prices: { small: "$4.25", medium: "$4.75", large: null }, description: "Caramel-flavored coffee frappe with whipped cream" }
     ],
     extras: [
       { name: "Extra Shot", price: "$0.75", description: "Add an extra shot of espresso to any drink" },
@@ -95,7 +103,9 @@ const Menu = () => {
                   <div className="menu-item-container">
                     <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
                     <div className="menu-item-dots"></div>
-                    <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
+                    <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#D2691E'}}>
+                      <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}{item.prices.large && <><span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -114,7 +124,18 @@ const Menu = () => {
                   <div className="menu-item-container">
                     <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
                     <div className="menu-item-dots"></div>
-                    <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
+                    <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#D2691E'}}>
+                      {item.prices.small && item.prices.large ? (
+                        // Full S|M|L display
+                        <><span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>
+                      ) : item.prices.small ? (
+                        // S|M display (no large)
+                        <><span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}</>
+                      ) : (
+                        // Single size (medium only)
+                        <>{item.prices.medium}</>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -125,7 +146,7 @@ const Menu = () => {
           <div style={{marginBottom: '2.5rem'}}>
             <div className="text-center mb-12">
               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🥤 Blended Frappes</div>
-              <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Cool, creamy blended drinks perfect for any season</div>
+              <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Cool, creamy blended drinks perfect for any season, available regular or decaf</div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {menuItems.frappes.map((item, index) => (
@@ -133,7 +154,18 @@ const Menu = () => {
                   <div className="menu-item-container">
                     <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
                     <div className="menu-item-dots"></div>
-                    <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
+                    <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#D2691E'}}>
+                      {item.prices.small && item.prices.large ? (
+                        // Full S|M|L display
+                        <><span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>
+                      ) : item.prices.small ? (
+                        // S|M display (no large)
+                        <><span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}</>
+                      ) : (
+                        // Single size (medium only)
+                        <>{item.prices.medium}</>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}
