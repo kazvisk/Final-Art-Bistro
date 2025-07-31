@@ -22,13 +22,17 @@ function App() {
 
         {/* Hero Section */}
         <div className="relative w-full overflow-hidden" style={{
-          height: '514px',
-          backgroundColor: '#8B4513'
+          height: '100vh',
+          backgroundColor: '#2D1810',
+          backgroundImage: 'url(/coffee-hero.jpg)',
+          backgroundSize: '100% auto',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}>
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-75"></div>
           <div className="relative z-10 w-full h-full flex justify-center items-center px-20">
             <div className="text-center">
-              <div className="text-color-white-solid text-7xl font-normal font-Ovo" style={{marginBottom: '2.5rem'}}>
+              <div className="text-color-white-solid text-7xl font-normal font-Ovo" style={{marginBottom: '2.5rem', textShadow: '3px 3px 6px rgba(0,0,0,1), 1px 1px 3px rgba(0,0,0,1)'}}>
                 Welcome to The Art Bistro
               </div>
               <div className="btn btn-white px-12 py-4">
