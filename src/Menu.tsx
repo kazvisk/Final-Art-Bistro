@@ -97,15 +97,13 @@ const Menu = () => {
               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>☕ Espresso Bar</div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">All drinks available iced, decaf, or any way you like</div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="space-y-4">
               {menuItems.coffee.map((item, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:border-orange-300 transition-all hover:shadow-lg">
-                  <div className="menu-item-container">
-                    <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
-                    <div className="menu-item-dots"></div>
-                    <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#D2691E'}}>
-                      <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}{item.prices.large && <><span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>}
-                    </div>
+                <div key={index} className="menu-item-container">
+                  <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
+                  <div className="menu-item-dots"></div>
+                  <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#D2691E'}}>
+                    <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}{item.prices.large && <><span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>}
                   </div>
                 </div>
               ))}
@@ -118,24 +116,22 @@ const Menu = () => {
               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🍵 The Uncoffees</div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Warm, comforting beverages without the caffeine</div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="space-y-4">
               {menuItems.uncoffees.map((item, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:border-orange-300 transition-all hover:shadow-lg">
-                  <div className="menu-item-container">
-                    <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
-                    <div className="menu-item-dots"></div>
-                    <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#D2691E'}}>
-                      {item.prices.small && item.prices.large ? (
-                        // Full S|M|L display
-                        <><span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>
-                      ) : item.prices.small ? (
-                        // S|M display (no large)
-                        <><span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}</>
-                      ) : (
-                        // Single size (medium only)
-                        <>{item.prices.medium}</>
-                      )}
-                    </div>
+                <div key={index} className="menu-item-container">
+                  <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
+                  <div className="menu-item-dots"></div>
+                  <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#D2691E'}}>
+                    {item.prices.small && item.prices.large ? (
+                      // Full S|M|L display
+                      <><span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>
+                    ) : item.prices.small ? (
+                      // S|M display (no large)
+                      <><span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}</>
+                    ) : (
+                      // Single size (medium only)
+                      <>{item.prices.medium}</>
+                    )}
                   </div>
                 </div>
               ))}
@@ -148,24 +144,22 @@ const Menu = () => {
               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🥤 Blended Frappes</div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Cool, creamy blended drinks perfect for any season, available regular or decaf</div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="space-y-4">
               {menuItems.frappes.map((item, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:border-orange-300 transition-all hover:shadow-lg">
-                  <div className="menu-item-container">
-                    <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
-                    <div className="menu-item-dots"></div>
-                    <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#D2691E'}}>
-                      {item.prices.small && item.prices.large ? (
-                        // Full S|M|L display
-                        <><span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>
-                      ) : item.prices.small ? (
-                        // S|M display (no large)
-                        <><span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}</>
-                      ) : (
-                        // Single size (medium only)
-                        <>{item.prices.medium}</>
-                      )}
-                    </div>
+                <div key={index} className="menu-item-container">
+                  <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
+                  <div className="menu-item-dots"></div>
+                  <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#D2691E'}}>
+                    {item.prices.small && item.prices.large ? (
+                      // Full S|M|L display
+                      <><span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>
+                    ) : item.prices.small ? (
+                      // S|M display (no large)
+                      <><span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}</>
+                    ) : (
+                      // Single size (medium only)
+                      <>{item.prices.medium}</>
+                    )}
                   </div>
                 </div>
               ))}
@@ -178,14 +172,12 @@ const Menu = () => {
               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>✨ Creative Extras</div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Customize your perfect drink with our add-ons</div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="space-y-4">
               {menuItems.extras.map((item, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:border-orange-300 transition-all hover:shadow-lg">
-                  <div className="menu-item-container">
-                    <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
-                    <div className="menu-item-dots"></div>
-                    <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
-                  </div>
+                <div key={index} className="menu-item-container">
+                  <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
+                  <div className="menu-item-dots"></div>
+                  <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
                 </div>
               ))}
             </div>
@@ -197,14 +189,12 @@ const Menu = () => {
               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🌿 Herb Teas</div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Soothing herbal blends for relaxation and wellness</div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="space-y-4">
               {menuItems.teas.map((item, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:border-orange-300 transition-all hover:shadow-lg">
-                  <div className="menu-item-container">
-                    <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
-                    <div className="menu-item-dots"></div>
-                    <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
-                  </div>
+                <div key={index} className="menu-item-container">
+                  <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
+                  <div className="menu-item-dots"></div>
+                  <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
                 </div>
               ))}
             </div>
@@ -216,14 +206,12 @@ const Menu = () => {
               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🥯 Bagels</div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Fresh bagels toasted to perfection</div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="space-y-4">
               {menuItems.bagels.map((item, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:border-orange-300 transition-all hover:shadow-lg">
-                  <div className="menu-item-container">
-                    <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
-                    <div className="menu-item-dots"></div>
-                    <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
-                  </div>
+                <div key={index} className="menu-item-container">
+                  <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
+                  <div className="menu-item-dots"></div>
+                  <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
                 </div>
               ))}
             </div>
@@ -235,14 +223,12 @@ const Menu = () => {
               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🥐 Croissants</div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Buttery, flaky French pastries baked daily</div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="space-y-4">
               {menuItems.croissants.map((item, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg border-2 border-gray-200 hover:border-orange-300 transition-all hover:shadow-lg">
-                  <div className="menu-item-container">
-                    <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
-                    <div className="menu-item-dots"></div>
-                    <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
-                  </div>
+                <div key={index} className="menu-item-container">
+                  <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
+                  <div className="menu-item-dots"></div>
+                  <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
                 </div>
               ))}
             </div>
