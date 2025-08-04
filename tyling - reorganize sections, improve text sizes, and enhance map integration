@@ -1,0 +1,5 @@
+[33m44967f3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Add About and Contact pages with navigation updates
+[33m1ff20e1[m Update navigation styling and fonts - add Quicksand font to sticky nav, improve text hierarchy, add location section with Google Maps
+[33m72b3d9e[m Update Home and Menu components, update dependencies
+[33m016f7aa[m Initial commit: Art Bistro website with modern design and Tailwind CSS
+[33m46d77ed[m Update menu with multi-size pricing and new items
