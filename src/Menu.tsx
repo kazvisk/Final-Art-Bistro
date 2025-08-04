@@ -64,25 +64,23 @@ const Menu = () => {
   return (
     <div className="relative bg-neutral-700">
       <div className="w-full min-h-screen bg-color-white-solid">
-        {/* Navigation */}
-        <div className="w-full bg-color-grey-13" style={{height: '120px'}}>
-          <div className="px-20 h-full flex justify-between items-center">
-            <div className="flex items-center">
-              <Link to="/" className="text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>
-                The Art Bistro
-              </Link>
-            </div>
-            <div className="flex gap-8">
-              <Link to="/" className="text-color-white-solid text-xl font-medium font-Quicksand hover:opacity-70 transition-opacity">Home</Link>
-              <Link to="/" className="text-color-white-solid text-xl font-medium font-Quicksand hover:opacity-70 transition-opacity">About Us</Link>
-              <Link to="/menu" className="text-color-white-solid text-xl font-medium font-Quicksand" style={{color: '#D2691E'}}>Menu</Link>
-              <div className="text-color-white-solid text-xl font-medium font-Quicksand">Contact</div>
-            </div>
-          </div>
-        </div>
+                 {/* Navigation */}
+         <nav className="bg-white px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50">
+           <div className="flex justify-between items-center">
+             <Link to="/" className="text-2xl font-bold text-orange-600 no-underline">
+               The Art Bistro
+             </Link>
+             <div className="flex gap-8">
+               <Link to="/" className="text-gray-800 no-underline font-bold text-xl">Home</Link>
+               <Link to="/" className="text-gray-800 no-underline font-bold text-xl">About Us</Link>
+               <Link to="/menu" className="text-gray-800 no-underline font-bold text-xl">Menu</Link>
+               <span className="text-gray-800 font-bold text-xl cursor-pointer">Contact</span>
+             </div>
+           </div>
+         </nav>
 
-        {/* Menu Hero Section */}
-        <div className="max-w-1280 mx-auto bg-color-white-solid rounded-lg my-20 px-20 py-20">
+                 {/* Menu Hero Section */}
+         <div className="max-w-1280 mx-auto bg-color-white-solid rounded-lg my-20 px-20 py-20" style={{marginTop: '140px'}}>
           <div className="text-center" style={{marginBottom: '5rem'}}>
             <div className="text-color-grey-13 font-normal font-Ovo mb-6" style={{fontSize: '4.5rem'}}>Our Menu</div>
             <div className="text-color-grey-13 text-2xl font-normal font-Quicksand max-w-2xl mx-auto">
@@ -246,46 +244,46 @@ const Menu = () => {
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="w-full bg-color-grey-13 py-20 mt-20">
-          <div className="max-w-1280 mx-auto flex gap-16 items-start">
-            {/* Square Logo */}
-            <div>
-              <div className="bg-gradient-amber-light flex items-center justify-center rounded-lg" style={{width: '320px', height: '320px'}}>
-                <div className="text-2xl font-Ovo" style={{color: '#92400e'}}>Art Bistro Logo</div>
-              </div>
-            </div>
-            
-            {/* All Text Content on Right Side */}
-            <div className="flex-1 flex gap-16">
-              <div className="flex-1">
-                <div className="text-color-white-solid text-3xl font-normal font-Ovo mb-6 leading-relaxed">Location & Hours</div>
-                <div className="text-color-white-solid text-xl font-bold font-Quicksand mb-2 leading-relaxed">Visit Us</div>
-                <div className="text-color-white-solid text-xl font-normal font-Quicksand mb-6 leading-relaxed">
-                  2960 Clement St, San Francisco CA 94121<br/>
-                  (415) 379-7119
-                </div>
-                <div className="text-color-white-solid text-xl font-bold font-Quicksand mb-2 leading-relaxed">Store Hours</div>
-                <div className="text-color-white-solid text-xl font-normal font-Quicksand leading-relaxed">
-                  Monday-Sunday 8:00 AM - 5:00 PM
-                </div>
-              </div>
-              <div className="flex-1">
-                <div className="text-color-white-solid text-3xl font-normal font-Ovo mb-6 leading-relaxed">More Information</div>
-                <div className="space-y-4">
-                  <Link to="/" className="block text-color-white-solid text-xl font-normal font-Quicksand border-b border-white pb-2 leading-relaxed hover:opacity-70 transition-opacity">Our Story</Link>
-                  <Link to="/menu" className="block text-color-white-solid text-xl font-normal font-Quicksand border-b border-white pb-2 leading-relaxed hover:opacity-70 transition-opacity">Our Menu</Link>
-                  <div className="text-color-white-solid text-xl font-normal font-Quicksand border-b border-white pb-2 leading-relaxed">Contact</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-1360 mx-auto px-10 py-6 mt-20 border-t border-white opacity-40">
-            <div className="text-color-white-solid text-base font-normal font-Quicksand">
-              Copyright © 2025 <span className="border-b border-white">Art Bistro</span>.
-            </div>
-          </div>
-        </div>
+                          {/* Footer */}
+         <footer className="bg-gray-800 text-white py-12 px-8">
+           <div className="max-w-6xl mx-auto">
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+               {/* Location & Hours */}
+               <div className="text-center">
+                 <h3 className="text-xl mb-4">Location & Hours</h3>
+                 <div className="mb-4">
+                   <h4 className="font-bold mb-2">Visit Us</h4>
+                   <p className="text-gray-300 leading-relaxed">
+                     2960 Clement St, San Francisco CA 94121<br/>
+                     (415) 379-7119
+                   </p>
+                 </div>
+                 <div>
+                   <h4 className="font-bold mb-2">Store Hours</h4>
+                   <p className="text-gray-300">
+                     Monday-Sunday 8:00 AM - 5:00 PM
+                   </p>
+                 </div>
+               </div>
+               
+               {/* More Information */}
+               <div className="text-center">
+                 <h3 className="text-xl mb-4">More Information</h3>
+                 <div className="flex flex-col gap-2">
+                   <Link to="/" className="text-gray-300 no-underline hover:text-white transition-colors">Our Story</Link>
+                   <Link to="/menu" className="text-gray-300 no-underline hover:text-white transition-colors">Our Menu</Link>
+                   <span className="text-gray-300 cursor-pointer">Contact</span>
+                 </div>
+               </div>
+             </div>
+             
+             <div className="border-t border-gray-600 pt-8 text-center">
+               <p className="text-gray-300">
+                 Copyright © 2025 <span className="text-orange-600">Art Bistro</span>.
+               </p>
+             </div>
+           </div>
+         </footer>
       </div>
     </div>
   );

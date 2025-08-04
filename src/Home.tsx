@@ -24,10 +24,12 @@ const Home = () => {
   const [currentReview, setCurrentReview] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
+     useEffect(() => {
+     const handleScroll = () => {
+       // Get the height of the viewport (hero section)
+       const heroHeight = window.innerHeight;
+       setIsScrolled(window.scrollY > heroHeight);
+     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -43,47 +45,44 @@ const Home = () => {
 
   return (
     <div className="font-sans bg-color-grey-95">
-      {/* Simple Text Navigation - Always visible */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-6 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-white no-underline drop-shadow-lg">
-          The Art Bistro
-        </Link>
-        <div className="flex gap-8 items-center">
-          <Link to="/" className="text-white no-underline font-medium drop-shadow-md">Home</Link>
-          <Link to="/" className="text-white no-underline font-medium drop-shadow-md">About Us</Link>
-          <Link to="/menu" className="text-white no-underline font-medium drop-shadow-md">Menu</Link>
-          <span className="text-white font-medium cursor-pointer drop-shadow-md">Contact</span>
-          <Link to="/menu" className="bg-white text-orange-600 px-4 py-2 no-underline rounded font-bold text-sm">
-            Explore Menu
-          </Link>
-        </div>
-      </nav>
+             {/* Simple Text Navigation - Always visible */}
+       <nav className="fixed top-0 left-0 right-0 z-50 px-20 py-8 flex justify-between items-center">
+         <Link to="/" className="text-2xl font-bold text-white no-underline drop-shadow-lg">
+           The Art Bistro
+         </Link>
+         <div className="flex gap-8 items-center">
+           <Link to="/" className="text-white no-underline font-medium text-xl drop-shadow-md">Home</Link>
+           <Link to="/" className="text-white no-underline font-medium text-xl drop-shadow-md">About Us</Link>
+           <Link to="/menu" className="text-white no-underline font-medium text-xl drop-shadow-md">Menu</Link>
+           <span className="text-white font-medium text-xl cursor-pointer drop-shadow-md">Contact</span>
+         </div>
+       </nav>
 
-      {/* Scrolled Navigation - Only visible when scrolled */}
-      {isScrolled && (
-        <nav className="bg-white px-4 py-4 shadow-md fixed top-0 left-0 right-0 z-50 animate-slideDown">
-          <div className="max-w-6xl mx-auto flex justify-between items-center">
-            <Link to="/" className="text-2xl font-bold text-orange-600 no-underline">
-              The Art Bistro
-            </Link>
-            <div className="flex gap-8">
-              <Link to="/" className="text-gray-800 no-underline font-medium">Home</Link>
-              <Link to="/" className="text-gray-800 no-underline font-medium">About Us</Link>
-              <Link to="/menu" className="text-gray-800 no-underline font-medium">Menu</Link>
-              <span className="text-gray-800 font-medium cursor-pointer">Contact</span>
-            </div>
-          </div>
-        </nav>
-      )}
+             {/* Scrolled Navigation - Only visible when scrolled */}
+       {isScrolled && (
+         <nav className="bg-white px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50 animate-slideDown">
+           <div className="flex justify-between items-center">
+                           <Link to="/" className="text-2xl font-bold text-orange-600 no-underline font-Quicksand">
+                The Art Bistro
+              </Link>
+             <div className="flex gap-8">
+               <Link to="/" className="text-gray-800 no-underline font-bold text-xl font-Quicksand">Home</Link>
+               <Link to="/" className="text-gray-800 no-underline font-bold text-xl font-Quicksand">About Us</Link>
+               <Link to="/menu" className="text-gray-800 no-underline font-bold text-xl font-Quicksand">Menu</Link>
+               <span className="text-gray-800 font-bold text-xl cursor-pointer font-Quicksand">Contact</span>
+             </div>
+           </div>
+         </nav>
+       )}
 
       {/* Hero Section */}
       <section className="h-screen bg-cover bg-center flex items-center justify-center relative" style={{ backgroundImage: 'url(/coffee-hero.jpg)' }}>
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div className="relative z-10 text-center text-white px-8 max-w-4xl">
-          <h1 className="text-5xl mb-4 font-bold">
+          <h1 className="text-6xl mb-4 font-bold">
             Welcome to The Art Bistro
           </h1>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-4xl mb-8 opacity-90">
             Where creativity meets comfort in the heart of San Francisco
           </p>
           <Link to="/menu" className="inline-block bg-white text-orange-600 px-8 py-4 no-underline rounded font-bold text-lg">
@@ -96,11 +95,11 @@ const Home = () => {
       <section className="py-16 px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl mb-4 text-gray-800">
+            <h2 className="text-5xl mb-4 text-gray-800">
               Our Creative Haven
             </h2>
             <div className="w-15 h-1 bg-orange-600 mx-auto mb-4"></div>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Art Bistro is a vibrant coffee shop in the heart of San Francisco where creativity meets comfort. 
               We celebrate the artistic spirit of our city with handcrafted coffee, locally-sourced ingredients, 
               and a space that inspires. From our signature pour-over coffee to our artisanal pastries, 
@@ -111,29 +110,29 @@ const Home = () => {
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-8 bg-gray-50 rounded-lg">
-              <div className="text-4xl mb-4">☕</div>
-              <h3 className="text-xl mb-4 text-gray-800">
+              <div className="text-5xl mb-4">☕</div>
+              <h3 className="text-2xl mb-4 text-gray-800">
                 Fresh Daily
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Our pastries and coffee are crafted fresh every morning with the finest ingredients.
               </p>
             </div>
             <div className="text-center p-8 bg-gray-50 rounded-lg">
-              <div className="text-4xl mb-4">🎨</div>
-              <h3 className="text-xl mb-4 text-gray-800">
+              <div className="text-5xl mb-4">🎨</div>
+              <h3 className="text-2xl mb-4 text-gray-800">
                 Local Artists
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 We showcase rotating exhibitions from talented local artists in our community.
               </p>
             </div>
             <div className="text-center p-8 bg-gray-50 rounded-lg">
-              <div className="text-4xl mb-4">👥</div>
-              <h3 className="text-xl mb-4 text-gray-800">
+              <div className="text-5xl mb-4">👥</div>
+              <h3 className="text-2xl mb-4 text-gray-800">
                 Community
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Join our community of artists, writers, and coffee enthusiasts in this cozy corner of creativity.
               </p>
             </div>
@@ -141,15 +140,74 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-16 px-8 bg-color-grey-95">
+             {/* Info Section */}
+       <section className="py-16 px-8 bg-color-grey-95">
+         <div className="max-w-6xl mx-auto">
+           {/* Heading and Subtext */}
+           <div className="text-center mb-12">
+             <h2 className="text-5xl mb-4 text-gray-800">
+               Our Location
+             </h2>
+             <div className="w-15 h-1 bg-orange-600 mx-auto mb-4"></div>
+             <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+               Conveniently located in San Francisco
+             </p>
+           </div>
+           
+           {/* Google Maps Embed */}
+           <div className="bg-white rounded-lg overflow-hidden shadow-lg mb-12">
+             <iframe
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.342280625182!2d-122.49347207491203!3d37.782017563511545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085870768cda713%3A0x4a91c17def119769!2s2960%20Clement%20St%2C%20San%20Francisco%2C%20CA%2094121%2C%20USA!5e0!3m2!1sen!2sca!4v1754286570996!5m2!1sen!2sca"
+               width="100%"
+               height="450"
+               style={{ border: 0 }}
+               allowFullScreen
+               loading="lazy"
+               referrerPolicy="no-referrer-when-downgrade"
+               title="The Art Bistro Location"
+             ></iframe>
+           </div>
+           
+           {/* Text Information - Centered */}
+           <div className="text-center space-y-6">
+             <h3 className="text-4xl font-bold text-gray-800 mb-4">
+               The Art Bistro
+             </h3>
+             
+             <div className="space-y-4">
+               <p className="text-xl text-gray-600">
+                 2960 Clement St, San Francisco CA 94121
+               </p>
+               
+               <div className="space-y-3">
+                 <p className="text-xl text-gray-600">
+                   Pickup orders can be made by phone call.
+                 </p>
+                 <p className="text-xl text-gray-600">
+                   We are a cash-only business.
+                 </p>
+               </div>
+               
+               <div>
+                 <h4 className="text-2xl font-bold text-gray-800 mb-3">Opening Hours</h4>
+                 <div className="space-y-2 text-gray-600">
+                   <p className="text-xl">Monday - Sunday: 8:00 AM - 5:00 PM</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </section>
+
+             {/* Gallery Section */}
+       <section className="py-16 px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl mb-4 text-gray-800">
+            <h2 className="text-5xl mb-4 text-gray-800">
               Our Collection
             </h2>
             <div className="w-15 h-1 bg-orange-600 mx-auto mb-4"></div>
-            <p className="text-lg text-gray-600">
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Discover our handcrafted coffee and artisanal treats
             </p>
           </div>
@@ -177,15 +235,15 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <section className="py-16 px-8 bg-white">
+             {/* Reviews Section */}
+       <section className="py-16 px-8 bg-color-grey-95">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl mb-4 text-gray-800">
+            <h2 className="text-5xl mb-4 text-gray-800">
               What Our Customers Say
             </h2>
             <div className="w-15 h-1 bg-orange-600 mx-auto mb-4"></div>
-            <p className="text-lg text-gray-600">
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Hear from our community of coffee lovers and artists
             </p>
           </div>
@@ -237,16 +295,9 @@ const Home = () => {
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-12 px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {/* Logo */}
-            <div className="text-center">
-              <div className="bg-orange-600 w-50 h-50 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <div className="text-lg font-bold">Art Bistro Logo</div>
-              </div>
-            </div>
-            
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {/* Location & Hours */}
-            <div>
+            <div className="text-center">
               <h3 className="text-xl mb-4">Location & Hours</h3>
               <div className="mb-4">
                 <h4 className="font-bold mb-2">Visit Us</h4>
@@ -264,7 +315,7 @@ const Home = () => {
             </div>
             
             {/* More Information */}
-            <div>
+            <div className="text-center">
               <h3 className="text-xl mb-4">More Information</h3>
               <div className="flex flex-col gap-2">
                 <Link to="/" className="text-gray-300 no-underline hover:text-white transition-colors">Our Story</Link>
