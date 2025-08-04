@@ -177,16 +177,27 @@ const Home = () => {
              ></iframe>
            </div>
            
-           {/* Text Information - Centered */}
-           <div className="text-center space-y-6">
-             <h3 className="text-4xl font-bold text-gray-800 mb-4">
-               The Art Bistro
-             </h3>
-             
-             <div className="space-y-4">
-               <p className="text-xl text-gray-600">
-                 2960 Clement St, San Francisco CA 94121
-               </p>
+                       {/* Text Information - Centered */}
+            <div className="text-center space-y-6">
+              <div className="mb-6">
+                <a 
+                  href="https://www.google.com/maps/dir//2960+Clement+St,+San+Francisco,+CA+94121" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg text-lg font-medium transition-colors"
+                >
+                  Get Directions
+                </a>
+              </div>
+              
+              <h3 className="text-4xl font-bold text-gray-800 mb-4">
+                The Art Bistro
+              </h3>
+              
+              <div className="space-y-4">
+                <p className="text-xl text-gray-600">
+                  2960 Clement St, San Francisco CA 94121
+                </p>
                
                <div className="space-y-3">
                  <p className="text-xl text-gray-600">
