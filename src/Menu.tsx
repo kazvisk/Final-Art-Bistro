@@ -34,50 +34,86 @@ const Menu = () => {
       { name: "Caramel Latte", prices: { small: "$4.25", medium: "$4.75", large: null }, description: "Caramel-flavored coffee frappe with whipped cream" }
     ],
     extras: [
-      { name: "Extra Shot", price: "$0.75", description: "Add an extra shot of espresso to any drink" },
-      { name: "Alternative Milk", price: "$0.65", description: "Oat, almond, soy, or coconut milk" },
-      { name: "Flavor Syrup", price: "$0.50", description: "Vanilla, caramel, hazelnut, or seasonal flavors" },
+      { name: "Espresso Shots", price: "$0.50", description: "Add an extra shot of espresso to any drink" },
+      { name: "Chocolate", price: "$0.50", description: "Rich chocolate syrup for your favorite drinks" },
+      { name: "White Chocolate", price: "$0.50", description: "Creamy white chocolate syrup" },
       { name: "Whipped Cream", price: "$0.50", description: "House-made whipped cream topping" },
-      { name: "Extra Hot/Iced", price: "$0.00", description: "Temperature customization at no charge" }
+      { name: "Torani Flavors", price: "$0.50", description: "Vanilla, caramel, hazelnut, or seasonal flavors" },
+      { name: "Soy Milk", price: "$0.50", description: "Alternative milk option for your drinks" }
     ],
     teas: [
-      { name: "Chamomile Dreams", price: "$3.75", description: "Soothing chamomile flowers for relaxation" },
-      { name: "Peppermint Fresh", price: "$3.75", description: "Invigorating peppermint leaves" },
-      { name: "Lavender Calm", price: "$4.25", description: "Aromatic lavender buds with honey notes" },
-      { name: "Ginger Zing", price: "$3.95", description: "Spicy ginger root with lemon hints" },
-      { name: "Hibiscus Bloom", price: "$4.15", description: "Tart hibiscus flowers with natural fruit flavors" }
+      { name: "Green-Honey Ginseng", price: "$2.00", description: "Refreshing green tea with honey and ginseng" },
+      { name: "Peppermint", price: "$2.00", description: "Invigorating peppermint leaves for a fresh taste" },
+      { name: "Chamomile", price: "$2.00", description: "Soothing chamomile flowers for relaxation" },
+      { name: "Ginseng Peppermint", price: "$2.00", description: "Energizing blend of ginseng and peppermint" },
+      { name: "Orange Gingermint", price: "$2.00", description: "Zesty orange with ginger and mint notes" },
+      { name: "Wintergreen", price: "$2.00", description: "Cool and refreshing wintergreen flavor" },
+      { name: "Lemon Chamomile", price: "$2.00", description: "Calming chamomile with bright lemon essence" }
     ],
     bagels: [
-      { name: "Everything Bagel", price: "$3.25", description: "Classic everything bagel with cream cheese" },
-      { name: "Sesame Seed Bagel", price: "$3.00", description: "Toasted sesame bagel with butter" },
-      { name: "Plain Bagel", price: "$2.75", description: "Simple toasted bagel with butter" },
-      { name: "Avocado Bagel", price: "$7.50", description: "Everything bagel with smashed avocado and seasonings" }
+      { name: "Untoasted, nothing on it", price: "$1.50", description: "Plain bagel, no toppings" },
+      { name: "Toasted, nothing on it", price: "$2.00", description: "Toasted bagel, no toppings" },
+      { name: "With Butter or Jam", price: "$3.00", description: "Bagel with your choice of butter or jam" },
+      { name: "With Butter and Jam", price: "$3.50", description: "Bagel with both butter and jam" },
+      { name: "With Cream Cheese", price: "$3.50", description: "Bagel with cream cheese" },
+      { name: "With Cream Cheese and Tomato", price: "$4.00", description: "Bagel with cream cheese and fresh tomato" },
+      { name: "With Peanut Butter or Jelly", price: "$3.00", description: "Bagel with your choice of peanut butter or jelly" },
+      { name: "With Peanut Butter and Jelly", price: "$3.50", description: "Bagel with both peanut butter and jelly" },
+      { name: "With Nutella", price: "$3.50", description: "Bagel with Nutella spread" },
+      { name: "With Cream Cheese and Garden Vegetables", price: "$5.00", description: "Bagel with cream cheese and fresh garden vegetables" },
+      { name: "With Lox, Cream Cheese, Onion and Capers", price: "$9.50", description: "Classic lox bagel with cream cheese, onion and capers" },
+      { name: "With Ham, Egg and Cheese", price: "$4.95", description: "Bagel with ham, egg and cheese" },
+      { name: "With Sausage, Egg and Cheese", price: "$4.95", description: "Bagel with sausage, egg and cheese" },
+      { name: "With Turkey, Egg and Cheese", price: "$4.95", description: "Bagel with turkey, egg and cheese" },
+      { name: "With Bacon, Egg and Cheese", price: "$5.25", description: "Bagel with bacon, egg and cheese" },
+      { name: "With Tuna and Hard Boiled Egg", price: "$4.95", description: "Bagel with tuna and hard boiled egg" },
+      { name: "With Cream Cheese and Bacon", price: "$5.00", description: "Bagel with cream cheese and bacon" },
+      { name: "With Egg and Cheese", price: "$4.00", description: "Bagel with egg and cheese" },
+      { name: "BLT (Bacon, Lettuce and Tomato)", price: "$5.50", description: "Classic BLT on a bagel" }
     ],
-    croissants: [
-      { name: "Plain Croissant", price: "$3.75", description: "Buttery, flaky French croissant" },
-      { name: "Almond Croissant", price: "$4.50", description: "Croissant filled with sweet almond paste" },
-      { name: "Chocolate Croissant", price: "$4.25", description: "Pain au chocolat with Belgian chocolate" },
-      { name: "Ham & Cheese Croissant", price: "$5.75", description: "Savory croissant with ham and Swiss cheese" }
-    ]
+         croissants: [
+       { name: "Toasted with Sausage, Egg and Cheese", price: "$5.50", description: "Toasted croissant with sausage, egg and cheese" },
+       { name: "Toasted with Ham, Egg and Cheese", price: "$5.50", description: "Toasted croissant with ham, egg and cheese" },
+       { name: "Toasted with Turkey, Egg and Cheese", price: "$5.50", description: "Toasted croissant with turkey, egg and cheese" },
+       { name: "Toasted with Bacon, Egg and Cheese", price: "$5.95", description: "Toasted croissant with bacon, egg and cheese" },
+       { name: "Toasted with Tuna and Hard Boiled Egg", price: "$5.50", description: "Toasted croissant with tuna and hard boiled egg" },
+       { name: "Toasted with Egg and Cheese", price: "$4.50", description: "Toasted croissant with egg and cheese" },
+       { name: "BLT (Bacon, Lettuce and Tomato)", price: "$6.25", description: "Classic BLT on a toasted croissant" }
+     ],
+     foodExtras: [
+       { name: "Add Egg", price: "$1.25", description: "Add a fresh egg to any bagel or croissant" },
+       { name: "Add Cheese", price: "$1.25", description: "Add cheese to any bagel or croissant" },
+       { name: "Add Bacon (1 strip)", price: "$0.95", description: "Add a crispy bacon strip to any item" },
+       { name: "Add Ham, Turkey or Tuna", price: "$1.75", description: "Add your choice of ham, turkey, or tuna" }
+     ]
   };
 
-  return (
+    return (
     <div className="relative bg-neutral-700">
       <div className="w-full min-h-screen bg-color-white-solid">
-                 {/* Navigation */}
-         <nav className="bg-white px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50">
-           <div className="flex justify-between items-center">
-             <Link to="/" className="text-2xl font-bold text-orange-600 no-underline">
-               The Art Bistro
-             </Link>
-             <div className="flex gap-8">
-               <Link to="/" className="text-gray-800 no-underline font-bold text-xl">Home</Link>
-               <Link to="/" className="text-gray-800 no-underline font-bold text-xl">About Us</Link>
-               <Link to="/menu" className="text-gray-800 no-underline font-bold text-xl">Menu</Link>
-               <span className="text-gray-800 font-bold text-xl cursor-pointer">Contact</span>
-             </div>
-           </div>
-         </nav>
+                                    {/* Announcement Bar */}
+        <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+          <div className="px-20 py-2 text-center">
+            <p className="text-sm text-black font-medium">
+              📞 Pickup orders can be made by phone call • 💵 We are a cash-only business
+            </p>
+          </div>
+        </div>
+
+                                                                         {/* Navigation */}
+            <nav className="bg-gray-800 px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50 font-sans" style={{marginTop: '32px'}}>
+            <div className="flex justify-between items-center">
+              <Link to="/" className="text-2xl font-bold text-orange-600 no-underline">
+                The Art Bistro
+              </Link>
+              <div className="flex gap-8">
+                <Link to="/" className="text-white no-underline font-bold text-xl">Home</Link>
+                <Link to="/about" className="text-white no-underline font-bold text-xl">About Us</Link>
+                <Link to="/menu" className="text-white no-underline font-bold text-xl">Menu</Link>
+                <Link to="/contact" className="text-white no-underline font-bold text-xl">Contact</Link>
+              </div>
+            </div>
+          </nav>
 
                  {/* Menu Hero Section */}
          <div className="max-w-1280 mx-auto bg-color-white-solid rounded-lg my-20 px-20 py-20" style={{marginTop: '140px'}}>
@@ -198,12 +234,12 @@ const Menu = () => {
             </div>
           </div>
 
-          {/* Bagels Section */}
-          <div style={{marginBottom: '2.5rem'}}>
-            <div className="text-center mb-12">
-              <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🥯 Bagels</div>
-              <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Fresh bagels toasted to perfection</div>
-            </div>
+                     {/* Bagels Section */}
+           <div style={{marginBottom: '2.5rem'}}>
+             <div className="text-center mb-12">
+               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🥯 Bagels</div>
+                               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Served on freshly made Asiago, All Seeded, Sesame, Plain, Cinnamon Raisin, or Whole Wheat bagels</div>
+             </div>
             <div className="space-y-4">
               {menuItems.bagels.map((item, index) => (
                 <div key={index} className="menu-item-container">
@@ -215,22 +251,39 @@ const Menu = () => {
             </div>
           </div>
 
-          {/* Croissants Section */}
-          <div style={{marginBottom: '2.5rem'}}>
-            <div className="text-center mb-12">
-              <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🥐 Croissants</div>
-              <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Buttery, flaky French pastries baked daily</div>
-            </div>
-            <div className="space-y-4">
-              {menuItems.croissants.map((item, index) => (
-                <div key={index} className="menu-item-container">
-                  <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
-                  <div className="menu-item-dots"></div>
-                  <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+                     {/* Croissants Section */}
+           <div style={{marginBottom: '2.5rem'}}>
+             <div className="text-center mb-12">
+               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🥐 Croissants</div>
+               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Buttery, flaky French pastries baked daily</div>
+             </div>
+             <div className="space-y-4">
+               {menuItems.croissants.map((item, index) => (
+                 <div key={index} className="menu-item-container">
+                   <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
+                   <div className="menu-item-dots"></div>
+                   <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
+                 </div>
+               ))}
+             </div>
+           </div>
+
+           {/* Food Extras Section */}
+           <div style={{marginBottom: '2.5rem'}}>
+             <div className="text-center mb-12">
+                               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🔧 Custom Add-Ons</div>
+               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Customize your bagel or croissant with these delicious add-ons</div>
+             </div>
+             <div className="space-y-4">
+               {menuItems.foodExtras.map((item, index) => (
+                 <div key={index} className="menu-item-container">
+                   <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
+                   <div className="menu-item-dots"></div>
+                   <span className="menu-item-price text-2xl font-bold font-Ovo" style={{color: '#D2691E'}}>{item.price}</span>
+                 </div>
+               ))}
+             </div>
+           </div>
 
           {/* Call to Action */}
           <div className="text-center bg-gray-50 p-12 rounded-lg">
@@ -272,7 +325,7 @@ const Menu = () => {
                  <div className="flex flex-col gap-2">
                    <Link to="/" className="text-gray-300 no-underline hover:text-white transition-colors">Our Story</Link>
                    <Link to="/menu" className="text-gray-300 no-underline hover:text-white transition-colors">Our Menu</Link>
-                   <span className="text-gray-300 cursor-pointer">Contact</span>
+                   <Link to="/contact" className="text-gray-300 no-underline hover:text-white transition-colors">Contact</Link>
                  </div>
                </div>
              </div>

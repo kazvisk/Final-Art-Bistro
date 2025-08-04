@@ -45,31 +45,40 @@ const Home = () => {
 
   return (
     <div className="font-sans bg-color-grey-95">
-             {/* Simple Text Navigation - Always visible */}
-       <nav className="fixed top-0 left-0 right-0 z-50 px-20 py-8 flex justify-between items-center">
+             {/* Announcement Bar */}
+       <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+         <div className="px-20 py-2 text-center">
+           <p className="text-sm text-black font-medium">
+             📞 Pickup orders can be made by phone call • 💵 We are a cash-only business
+           </p>
+         </div>
+       </div>
+
+                           {/* Simple Text Navigation - Always visible */}
+        <nav className="fixed top-0 left-0 right-0 z-50 px-20 py-8 flex justify-between items-center" style={{marginTop: '32px'}}>
          <Link to="/" className="text-2xl font-bold text-white no-underline drop-shadow-lg">
            The Art Bistro
          </Link>
          <div className="flex gap-8 items-center">
-           <Link to="/" className="text-white no-underline font-medium text-xl drop-shadow-md">Home</Link>
-           <Link to="/" className="text-white no-underline font-medium text-xl drop-shadow-md">About Us</Link>
-           <Link to="/menu" className="text-white no-underline font-medium text-xl drop-shadow-md">Menu</Link>
-           <span className="text-white font-medium text-xl cursor-pointer drop-shadow-md">Contact</span>
+                       <Link to="/" className="text-white no-underline font-medium text-xl drop-shadow-md">Home</Link>
+            <Link to="/about" className="text-white no-underline font-medium text-xl drop-shadow-md">About Us</Link>
+                        <Link to="/menu" className="text-white no-underline font-medium text-xl drop-shadow-md">Menu</Link>
+            <Link to="/contact" className="text-white no-underline font-medium text-xl drop-shadow-md">Contact</Link>
          </div>
        </nav>
 
              {/* Scrolled Navigation - Only visible when scrolled */}
        {isScrolled && (
-         <nav className="bg-white px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50 animate-slideDown">
+         <nav className="bg-gray-800 px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50 animate-slideDown" style={{marginTop: '32px'}}>
            <div className="flex justify-between items-center">
-                           <Link to="/" className="text-2xl font-bold text-orange-600 no-underline font-Quicksand">
+                           <Link to="/" className="text-2xl font-bold text-orange-600 no-underline">
                 The Art Bistro
               </Link>
              <div className="flex gap-8">
-               <Link to="/" className="text-gray-800 no-underline font-bold text-xl font-Quicksand">Home</Link>
-               <Link to="/" className="text-gray-800 no-underline font-bold text-xl font-Quicksand">About Us</Link>
-               <Link to="/menu" className="text-gray-800 no-underline font-bold text-xl font-Quicksand">Menu</Link>
-               <span className="text-gray-800 font-bold text-xl cursor-pointer font-Quicksand">Contact</span>
+                               <Link to="/" className="text-white no-underline font-bold text-xl">Home</Link>
+                <Link to="/about" className="text-white no-underline font-bold text-xl">About Us</Link>
+                                <Link to="/menu" className="text-white no-underline font-bold text-xl">Menu</Link>
+                <Link to="/contact" className="text-white no-underline font-bold text-xl">Contact</Link>
              </div>
            </div>
          </nav>
@@ -320,7 +329,7 @@ const Home = () => {
               <div className="flex flex-col gap-2">
                 <Link to="/" className="text-gray-300 no-underline hover:text-white transition-colors">Our Story</Link>
                 <Link to="/menu" className="text-gray-300 no-underline hover:text-white transition-colors">Our Menu</Link>
-                <span className="text-gray-300 cursor-pointer">Contact</span>
+                <Link to="/contact" className="text-gray-300 no-underline hover:text-white transition-colors">Contact</Link>
               </div>
             </div>
           </div>
