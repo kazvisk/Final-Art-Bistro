@@ -89,14 +89,14 @@ const Menu = () => {
   };
 
     return (
-    <div className="relative bg-neutral-700">
+    <div className="relative bg-neutral-700 font-sans">
       <div className="w-full min-h-screen bg-color-white-solid">
                                     {/* Announcement Bar */}
         <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
           <div className="px-20 py-2 text-center">
-            <p className="text-sm text-black font-medium">
-              📞 Pickup orders can be made by phone call • 💵 We are a cash-only business
-            </p>
+                       <p className="text-sm text-black font-medium">
+             📞 Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • 💵 We are a cash-only business
+           </p>
           </div>
         </div>
 
@@ -268,8 +268,8 @@ const Menu = () => {
              </div>
            </div>
 
-           {/* Food Extras Section */}
-           <div style={{marginBottom: '2.5rem'}}>
+                       {/* Food Extras Section */}
+            <div style={{marginBottom: '0.5rem'}}>
              <div className="text-center mb-12">
                                <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🔧 Custom Add-Ons</div>
                <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Customize your bagel or croissant with these delicious add-ons</div>
@@ -285,58 +285,84 @@ const Menu = () => {
              </div>
            </div>
 
-          {/* Call to Action */}
-          <div className="text-center bg-gray-50 p-12 rounded-lg">
-            <div className="text-color-grey-13 text-3xl font-normal font-Ovo mb-4">Ready to Visit?</div>
-            <div className="text-color-grey-13 text-lg font-normal font-Quicksand mb-6 max-w-xl mx-auto">
-              Come experience our cozy atmosphere, meet fellow creatives, and enjoy the best coffee in San Francisco.
-            </div>
-            <Link to="/" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg text-xl font-medium font-Quicksand transition-colors">
-              Back to Home
-            </Link>
-          </div>
         </div>
 
-                          {/* Footer */}
-         <footer className="bg-gray-800 text-white py-12 px-8">
-           <div className="max-w-6xl mx-auto">
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-               {/* Location & Hours */}
-               <div className="text-center">
-                 <h3 className="text-xl mb-4">Location & Hours</h3>
-                 <div className="mb-4">
-                   <h4 className="font-bold mb-2">Visit Us</h4>
-                   <p className="text-gray-300 leading-relaxed">
-                     2960 Clement St, San Francisco CA 94121<br/>
-                     (415) 379-7119
-                   </p>
-                 </div>
-                 <div>
-                   <h4 className="font-bold mb-2">Store Hours</h4>
-                   <p className="text-gray-300">
-                     Monday-Sunday 8:00 AM - 5:00 PM
-                   </p>
-                 </div>
+                 {/* Call to Action Section - Full Width */}
+         <section className="py-20 px-8 bg-gray-50">
+           <div className="max-w-4xl mx-auto text-center">
+             <div className="text-color-grey-13 text-4xl font-normal font-Ovo mb-6">Ready to Taste the Difference?</div>
+                                                     <div className="text-color-grey-13 text-xl font-normal font-Quicksand mb-8 max-w-2xl mx-auto">
+                 Come visit us and experience our carefully crafted coffee, soothing teas, and fresh bagels in our cozy, artistic atmosphere.
                </div>
-               
-               {/* More Information */}
-               <div className="text-center">
-                 <h3 className="text-xl mb-4">More Information</h3>
-                 <div className="flex flex-col gap-2">
-                   <Link to="/" className="text-gray-300 no-underline hover:text-white transition-colors">Our Story</Link>
-                   <Link to="/menu" className="text-gray-300 no-underline hover:text-white transition-colors">Our Menu</Link>
-                   <Link to="/contact" className="text-gray-300 no-underline hover:text-white transition-colors">Contact</Link>
-                 </div>
-               </div>
+                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+               <Link to="/" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
+                 Back to Home
+               </Link>
+               <Link to="/about" className="inline-block bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
+                 About Us
+               </Link>
              </div>
-             
-             <div className="border-t border-gray-600 pt-8 text-center">
-               <p className="text-gray-300">
-                 Copyright © 2025 <span className="text-orange-600">Art Bistro</span>.
-               </p>
-             </div>
-           </div>
-         </footer>
+          </div>
+        </section>
+
+                                                     {/* Footer */}
+          <footer className="bg-gray-800 text-white py-12 px-8" style={{fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'}}>
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                {/* Location & Hours */}
+                <div className="text-center">
+                  <h3 className="text-xl mb-4">Location & Hours</h3>
+                  <div className="mb-4">
+                    <h4 className="font-bold mb-2">Visit Us</h4>
+                    <p className="text-gray-300 leading-relaxed">
+                      2960 Clement St, San Francisco CA 94121
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold mb-2">Store Hours</h4>
+                    <p className="text-gray-300">
+                      Monday-Sunday 8:00 AM - 5:00 PM
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Contact Information */}
+                <div className="text-center">
+                  <h3 className="text-xl mb-4">Contact Us</h3>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="text-orange-600">📞</span>
+                      <a href="tel:+14153797119" className="text-gray-300 no-underline hover:text-white transition-colors">
+                        (415) 379-7119
+                      </a>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="text-orange-600">✉️</span>
+                      <a href="mailto:support@theartbistro.site" className="text-gray-300 no-underline hover:text-white transition-colors">
+                        support@theartbistro.site
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* More Information */}
+                <div className="text-center">
+                  <h3 className="text-xl mb-4">More Information</h3>
+                  <div className="flex flex-col gap-2">
+                    <Link to="/about" className="text-gray-300 no-underline hover:text-white transition-colors">Our Story</Link>
+                    <Link to="/menu" className="text-gray-300 no-underline hover:text-white transition-colors">Our Menu</Link>
+                    <Link to="/contact" className="text-gray-300 no-underline hover:text-white transition-colors">Contact</Link>
+                  </div>
+                </div>
+              </div>
+              
+                          <div className="border-t border-gray-600 pt-8 text-center">
+              <p className="text-gray-300">
+                Copyright © 2025 <span>The Art Bistro</span>.
+              </p>
+            </div>
+            </div>
+          </footer>
       </div>
     </div>
   );

@@ -49,7 +49,7 @@ const Home = () => {
        <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
          <div className="px-20 py-2 text-center">
            <p className="text-sm text-black font-medium">
-             📞 Pickup orders can be made by phone call • 💵 We are a cash-only business
+             📞 Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • 💵 We are a cash-only business
            </p>
          </div>
        </div>
@@ -304,15 +304,14 @@ const Home = () => {
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-12 px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {/* Location & Hours */}
             <div className="text-center">
               <h3 className="text-xl mb-4">Location & Hours</h3>
               <div className="mb-4">
                 <h4 className="font-bold mb-2">Visit Us</h4>
                 <p className="text-gray-300 leading-relaxed">
-                  2960 Clement St, San Francisco CA 94121<br/>
-                  (415) 379-7119
+                  2960 Clement St, San Francisco CA 94121
                 </p>
               </div>
               <div>
@@ -323,22 +322,41 @@ const Home = () => {
               </div>
             </div>
             
+            {/* Contact Information */}
+            <div className="text-center">
+              <h3 className="text-xl mb-4">Contact Us</h3>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center justify-center gap-2">
+                  <span className="text-orange-600">📞</span>
+                  <a href="tel:+14153797119" className="text-gray-300 no-underline hover:text-white transition-colors">
+                    (415) 379-7119
+                  </a>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <span className="text-orange-600">✉️</span>
+                  <a href="mailto:support@theartbistro.site" className="text-gray-300 no-underline hover:text-white transition-colors">
+                    support@theartbistro.site
+                  </a>
+                </div>
+              </div>
+            </div>
+            
             {/* More Information */}
             <div className="text-center">
               <h3 className="text-xl mb-4">More Information</h3>
               <div className="flex flex-col gap-2">
-                <Link to="/" className="text-gray-300 no-underline hover:text-white transition-colors">Our Story</Link>
+                <Link to="/about" className="text-gray-300 no-underline hover:text-white transition-colors">Our Story</Link>
                 <Link to="/menu" className="text-gray-300 no-underline hover:text-white transition-colors">Our Menu</Link>
                 <Link to="/contact" className="text-gray-300 no-underline hover:text-white transition-colors">Contact</Link>
               </div>
             </div>
           </div>
           
-          <div className="border-t border-gray-600 pt-8 text-center">
-            <p className="text-gray-300">
-              Copyright © 2025 <span className="text-orange-600">Art Bistro</span>.
-            </p>
-          </div>
+                      <div className="border-t border-gray-600 pt-8 text-center">
+              <p className="text-gray-300">
+                Copyright © 2025 <span>The Art Bistro</span>.
+              </p>
+            </div>
         </div>
       </footer>
 
