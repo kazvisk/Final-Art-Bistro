@@ -11,40 +11,40 @@ const Contact = () => {
     <div className="relative bg-neutral-700 font-sans">
       <div className="w-full min-h-screen bg-color-white-solid">
         {/* Announcement Bar */}
-        <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-color-white-solid border-b border-gray-200">
           <div className="px-20 py-2 text-center">
-            <p className="text-sm text-black font-medium">
-              Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • We are a cash-only business
+            <p className="text-sm text-color-black-solid font-medium">
+              Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-amber-600 hover:text-amber-700 transition-colors">(415) 379-7119</a> • We are a cash-only business
             </p>
           </div>
         </div>
 
         {/* Navigation */}
-        <nav className="bg-gray-800 px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50 font-sans" style={{marginTop: '32px'}}>
+        <nav className="bg-neutral-700 px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50 font-sans" style={{marginTop: '32px'}}>
           <div className="flex justify-between items-center">
-            <Link to="/" className="text-2xl font-bold text-orange-600 no-underline">
+            <Link to="/" className="text-2xl font-bold text-amber-500 no-underline">
               The Art Bistro
             </Link>
             <div className="flex gap-8">
-              <Link to="/" className="text-white no-underline font-bold text-xl">Home</Link>
-              <Link to="/about" className="text-white no-underline font-bold text-xl">About Us</Link>
-              <Link to="/menu" className="text-white no-underline font-bold text-xl">Menu</Link>
-              <Link to="/contact" className="text-white no-underline font-bold text-xl">Contact</Link>
+              <Link to="/" className="text-color-white-solid no-underline font-bold text-xl">Home</Link>
+              <Link to="/about" className="text-color-white-solid no-underline font-bold text-xl">About Us</Link>
+              <Link to="/menu" className="text-color-white-solid no-underline font-bold text-xl">Menu</Link>
+              <Link to="/contact" className="text-color-white-solid no-underline font-bold text-xl">Contact</Link>
             </div>
           </div>
         </nav>
 
                 {/* Contact Information Section */}
-        <section className="py-20 px-8 bg-white" style={{marginTop: '140px'}}>
+        <section className="py-20 px-8 bg-color-white-solid" style={{marginTop: '140px'}}>
           <div className="max-w-6xl mx-auto">
                          <div className="text-center mb-16">
-               <h1 className="text-6xl mb-8 text-gray-800 font-sans">
+               <h1 className="text-6xl mb-8 text-color-grey-13 font-sans">
                  Contact Us
                </h1>
                <p className="text-3xl text-gray-600 max-w-4xl mx-auto mb-10">
                  We'd love to hear from you and welcome you to our community
                </p>
-               <div className="w-20 h-1 bg-orange-600 mx-auto mb-10"></div>
+               <div className="w-20 h-1 bg-amber-600 mx-auto mb-10"></div>
                <p className="text-2xl text-gray-600 max-w-4xl mx-auto">
                  Whether you have questions, want to place an order, or just want to say hello, 
                  we're here to help. Stop by for a visit or reach out to us directly.
@@ -53,8 +53,8 @@ const Contact = () => {
 
                                                                                                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                  {/* Top Row: Find Us (spans full width) */}
-                 <div className="lg:col-span-2 bg-orange-50 p-10 rounded-lg border border-orange-200 h-[32rem] flex flex-col">
-                   <h3 className="text-4xl mb-8 text-gray-800 font-sans">Find Us</h3>
+                 <div className="lg:col-span-2 bg-amber-50 p-10 rounded-lg border border-amber-200 h-[32rem] flex flex-col">
+                   <h3 className="text-4xl mb-8 text-color-grey-13 font-sans">Find Us</h3>
                    <div className="flex-grow rounded-lg overflow-hidden shadow-lg">
                      <iframe
                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.342280625182!2d-122.49347207491203!3d37.782017563511545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085870768cda713%3A0x4a91c17def119769!2s2960%20Clement%20St%2C%20San%20Francisco%2C%20CA%2094121%2C%20USA!5e0!3m2!1sen!2sca!4v1754286570996!5m2!1sen!2sca"
@@ -72,7 +72,7 @@ const Contact = () => {
                        href="https://www.google.com/maps/dir//2960+Clement+St,+San+Francisco,+CA+94121" 
                        target="_blank" 
                        rel="noopener noreferrer"
-                       className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg text-lg font-medium transition-colors"
+                       className="inline-block bg-amber-600 hover:bg-amber-700 text-color-white-solid px-6 py-3 rounded-lg text-lg font-medium transition-colors"
                      >
                        Get Directions
                      </a>
@@ -80,8 +80,8 @@ const Contact = () => {
                  </div>
 
                  {/* Second Row: Visit Us and Important Notes */}
-                 <div className="bg-gray-50 p-10 rounded-lg h-96 flex flex-col">
-                   <h3 className="text-4xl mb-8 text-gray-800 font-sans">Visit Us</h3>
+                 <div className="bg-color-grey-95 p-10 rounded-lg h-96 flex flex-col">
+                   <h3 className="text-4xl mb-8 text-color-grey-13 font-sans">Visit Us</h3>
                    <div className="space-y-6 flex-grow">
                                          <div>
                       <p className="text-xl font-semibold text-gray-800">Address</p>
@@ -93,22 +93,22 @@ const Contact = () => {
                      
                                          <div>
                       <p className="text-xl font-semibold text-gray-800">Phone</p>
-                      <a href="tel:+14153797119" className="text-lg text-orange-600 hover:text-orange-700 transition-colors">
+                      <a href="tel:+14153797119" className="text-lg text-amber-600 hover:text-amber-700 transition-colors">
                         (415) 379-7119
                       </a>
                     </div>
                      
                                          <div>
                       <p className="text-xl font-semibold text-gray-800">Email</p>
-                      <a href="mailto:support@theartbistro.site" className="text-lg text-orange-600 hover:text-orange-700 transition-colors">
+                      <a href="mailto:support@theartbistro.site" className="text-lg text-amber-600 hover:text-amber-700 transition-colors">
                         support@theartbistro.site
                       </a>
                     </div>
                    </div>
                  </div>
 
-                 <div className="bg-gray-50 p-10 rounded-lg h-96 flex flex-col">
-                   <h3 className="text-3xl mb-6 text-gray-800 font-sans">Important Notes</h3>
+                 <div className="bg-color-grey-95 p-10 rounded-lg h-96 flex flex-col">
+                   <h3 className="text-3xl mb-6 text-color-grey-13 font-sans">Important Notes</h3>
                    <ul className="space-y-3 text-lg text-gray-600 flex-grow">
                      <li>• We are a cash-only business</li>
                      <li>• Pickup orders can be made by phone call</li>
@@ -118,8 +118,8 @@ const Contact = () => {
                  </div>
 
                  {/* Third Row: Why Visit Us and Hours of Operation */}
-                 <div className="bg-gray-50 p-10 rounded-lg h-[28rem] flex flex-col">
-                   <h3 className="text-4xl mb-8 text-gray-800 font-sans">Why Visit Us?</h3>
+                 <div className="bg-color-grey-95 p-10 rounded-lg h-[28rem] flex flex-col">
+                   <h3 className="text-4xl mb-8 text-color-grey-13 font-sans">Why Visit Us?</h3>
                    <div className="space-y-6 flex-grow">
                                          <div>
                       <h4 className="text-xl font-semibold text-gray-800">Artisanal Coffee</h4>
@@ -140,8 +140,8 @@ const Contact = () => {
                    </div>
                  </div>
 
-                 <div className="bg-gray-50 p-10 rounded-lg h-[28rem] flex flex-col">
-                   <h3 className="text-4xl mb-8 text-gray-800 font-sans">Hours of Operation</h3>
+                 <div className="bg-color-grey-95 p-10 rounded-lg h-[28rem] flex flex-col">
+                   <h3 className="text-4xl mb-8 text-color-grey-13 font-sans">Hours of Operation</h3>
                    <div className="space-y-4 flex-grow">
                      <div className="flex justify-between items-center">
                        <span className="text-lg text-gray-600">Monday</span>
@@ -178,19 +178,19 @@ const Contact = () => {
         </section>
 
                  {/* Call to Action */}
-         <section className="py-20 px-8 bg-orange-50">
+         <section className="py-20 px-8 bg-amber-50">
            <div className="max-w-4xl mx-auto text-center">
-                           <h2 className="text-4xl mb-6 text-gray-800 font-sans">
+                           <h2 className="text-4xl mb-6 text-color-grey-13 font-sans">
                 Ready to Visit?
               </h2>
               <p className="text-xl text-gray-600 mb-8">
                 We can't wait to welcome you to The Art Bistro family!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/menu" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg text-lg font-medium font-sans transition-colors">
+                <Link to="/menu" className="inline-block bg-amber-600 hover:bg-amber-700 text-color-white-solid px-8 py-4 rounded-lg text-lg font-medium font-sans transition-colors">
                   Explore Our Menu
                 </Link>
-                <Link to="/about" className="inline-block bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded-lg text-lg font-medium font-sans transition-colors">
+                <Link to="/about" className="inline-block bg-neutral-700 hover:bg-gray-900 text-color-white-solid px-8 py-4 rounded-lg text-lg font-medium font-sans transition-colors">
                   Learn Our Story
                 </Link>
               </div>
@@ -198,7 +198,7 @@ const Contact = () => {
          </section>
 
         {/* Footer */}
-        <footer className="bg-gray-800 text-white py-12 px-8" style={{fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'}}>
+        <footer className="bg-neutral-700 text-color-white-solid py-12 px-8" style={{fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'}}>
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               {/* Location & Hours */}
@@ -223,14 +223,14 @@ const Contact = () => {
                 <h3 className="text-xl mb-4">Contact Us</h3>
                 <div className="flex flex-col gap-2">
                   <div className="flex items-center justify-center gap-2">
-                    <PhoneIcon className="text-orange-600" />
-                    <a href="tel:+14153797119" className="text-gray-300 no-underline hover:text-white transition-colors">
+                    <PhoneIcon className="text-amber-500" />
+                    <a href="tel:+14153797119" className="text-gray-300 no-underline hover:text-color-white-solid transition-colors">
                       (415) 379-7119
                     </a>
                   </div>
                   <div className="flex items-center justify-center gap-2">
-                    <MailIcon className="text-orange-600" />
-                    <a href="mailto:support@theartbistro.site" className="text-gray-300 no-underline hover:text-white transition-colors">
+                    <MailIcon className="text-amber-500" />
+                    <a href="mailto:support@theartbistro.site" className="text-gray-300 no-underline hover:text-color-white-solid transition-colors">
                       support@theartbistro.site
                     </a>
                   </div>
@@ -241,9 +241,9 @@ const Contact = () => {
               <div className="text-center">
                 <h3 className="text-xl mb-4">More Information</h3>
                 <div className="flex flex-col gap-2">
-                  <Link to="/about" className="text-gray-300 no-underline hover:text-white transition-colors">Our Story</Link>
-                  <Link to="/menu" className="text-gray-300 no-underline hover:text-white transition-colors">Our Menu</Link>
-                  <Link to="/contact" className="text-gray-300 no-underline hover:text-white transition-colors">Contact</Link>
+                  <Link to="/about" className="text-gray-300 no-underline hover:text-color-white-solid transition-colors">Our Story</Link>
+                  <Link to="/menu" className="text-gray-300 no-underline hover:text-color-white-solid transition-colors">Our Menu</Link>
+                  <Link to="/contact" className="text-gray-300 no-underline hover:text-color-white-solid transition-colors">Contact</Link>
                 </div>
               </div>
             </div>

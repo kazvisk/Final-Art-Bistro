@@ -94,28 +94,28 @@ const Menu = () => {
   };
 
     return (
-    <div className="relative bg-neutral-700 font-sans">
+        <div className="relative bg-neutral-700 font-sans">
       <div className="w-full min-h-screen bg-color-white-solid">
                                     {/* Announcement Bar */}
-        <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-color-white-solid border-b border-gray-200">
           <div className="px-20 py-2 text-center">
-                       <p className="text-sm text-black font-medium">
-                           Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • We are a cash-only business
-           </p>
+            <p className="text-sm text-color-black-solid font-medium">
+              Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-amber-600 hover:text-amber-700 transition-colors">(415) 379-7119</a> • We are a cash-only business
+            </p>
           </div>
         </div>
 
                                                                          {/* Navigation */}
-            <nav className="bg-gray-800 px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50 font-sans" style={{marginTop: '32px'}}>
+            <nav className="bg-neutral-700 px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50 font-sans" style={{marginTop: '32px'}}>
             <div className="flex justify-between items-center">
-              <Link to="/" className="text-2xl font-bold text-orange-600 no-underline">
+              <Link to="/" className="text-2xl font-bold text-amber-500 no-underline">
                 The Art Bistro
               </Link>
               <div className="flex gap-8">
-                <Link to="/" className="text-white no-underline font-bold text-xl">Home</Link>
-                <Link to="/about" className="text-white no-underline font-bold text-xl">About Us</Link>
-                <Link to="/menu" className="text-white no-underline font-bold text-xl">Menu</Link>
-                <Link to="/contact" className="text-white no-underline font-bold text-xl">Contact</Link>
+                <Link to="/" className="text-color-white-solid no-underline font-bold text-xl">Home</Link>
+                <Link to="/about" className="text-color-white-solid no-underline font-bold text-xl">About Us</Link>
+                <Link to="/menu" className="text-color-white-solid no-underline font-bold text-xl">Menu</Link>
+                <Link to="/contact" className="text-color-white-solid no-underline font-bold text-xl">Contact</Link>
               </div>
             </div>
           </nav>
@@ -133,7 +133,7 @@ const Menu = () => {
           {/* Coffee Section */}
           <div style={{marginBottom: '2.5rem'}}>
             <div className="text-center mb-12">
-              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                 Espresso Bar
               </div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">All drinks available iced, decaf, or any way you like</div>
@@ -143,8 +143,8 @@ const Menu = () => {
                 <div key={index} className="menu-item-container">
                   <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
                   <div className="menu-item-dots"></div>
-                  <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#D2691E'}}>
-                    <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}{item.prices.large && <><span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>}
+                  <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#A0522D'}}>
+                    <span className="text-lg font-bold bg-amber-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-amber-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}{item.prices.large && <><span className="mx-2">|</span> <span className="text-lg font-bold bg-amber-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>}
                   </div>
                 </div>
               ))}
@@ -154,7 +154,7 @@ const Menu = () => {
           {/* The Uncoffees Section */}
           <div style={{marginBottom: '2.5rem'}}>
             <div className="text-center mb-12">
-              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                 The Uncoffees
               </div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Warm, comforting beverages without the caffeine</div>
@@ -184,7 +184,7 @@ const Menu = () => {
           {/* Blended Frappes Section */}
           <div style={{marginBottom: '2.5rem'}}>
             <div className="text-center mb-12">
-              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                 Blended Frappes
               </div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Cool, creamy blended drinks perfect for any season, available regular or decaf</div>
@@ -214,7 +214,7 @@ const Menu = () => {
           {/* Creative Extras Section */}
           <div style={{marginBottom: '2.5rem'}}>
             <div className="text-center mb-12">
-              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                 Creative Extras
               </div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Customize your perfect drink with our add-ons</div>
@@ -233,7 +233,7 @@ const Menu = () => {
           {/* Herb Teas Section */}
           <div style={{marginBottom: '2.5rem'}}>
             <div className="text-center mb-12">
-              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                 Herb Teas
               </div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Soothing herbal blends for relaxation and wellness</div>
@@ -252,7 +252,7 @@ const Menu = () => {
                      {/* Bagels Section */}
            <div style={{marginBottom: '2.5rem'}}>
              <div className="text-center mb-12">
-               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                  Bagels
                </div>
                                <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Served on freshly made Asiago, All Seeded, Sesame, Plain, Cinnamon Raisin, or Whole Wheat bagels</div>
@@ -271,7 +271,7 @@ const Menu = () => {
                      {/* Croissants Section */}
            <div style={{marginBottom: '2.5rem'}}>
              <div className="text-center mb-12">
-               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                  Croissants
                </div>
                <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Buttery, flaky French pastries baked daily</div>
@@ -290,7 +290,7 @@ const Menu = () => {
                        {/* Food Extras Section */}
             <div style={{marginBottom: '0.5rem'}}>
              <div className="text-center mb-12">
-                               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+                               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                  Custom Add-Ons
                </div>
                <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Customize your bagel or croissant with these delicious add-ons</div>
@@ -309,17 +309,17 @@ const Menu = () => {
         </div>
 
                  {/* Call to Action Section - Full Width */}
-         <section className="py-20 px-8 bg-gray-50">
+         <section className="py-20 px-8 bg-color-grey-95">
            <div className="max-w-4xl mx-auto text-center">
              <div className="text-color-grey-13 text-4xl font-normal font-Ovo mb-6">Ready to Taste the Difference?</div>
                                                      <div className="text-color-grey-13 text-xl font-normal font-Quicksand mb-8 max-w-2xl mx-auto">
                  Come visit us and experience our carefully crafted coffee, soothing teas, and fresh bagels in our cozy, artistic atmosphere.
                </div>
                          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-               <Link to="/" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
+               <Link to="/" className="inline-block bg-amber-600 hover:bg-amber-700 text-color-white-solid px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
                  Back to Home
                </Link>
-               <Link to="/about" className="inline-block bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
+               <Link to="/about" className="inline-block bg-neutral-700 hover:bg-gray-900 text-color-white-solid px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
                  About Us
                </Link>
              </div>
@@ -327,7 +327,7 @@ const Menu = () => {
         </section>
 
                                                      {/* Footer */}
-          <footer className="bg-gray-800 text-white py-12 px-8" style={{fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'}}>
+          <footer className="bg-neutral-700 text-color-white-solid py-12 px-8" style={{fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'}}>
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 {/* Location & Hours */}
@@ -352,14 +352,14 @@ const Menu = () => {
                   <h3 className="text-xl mb-4">Contact Us</h3>
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center justify-center gap-2">
-                      <PhoneIcon className="text-orange-600" />
-                      <a href="tel:+14153797119" className="text-gray-300 no-underline hover:text-white transition-colors">
+                      <PhoneIcon className="text-amber-500" />
+                      <a href="tel:+14153797119" className="text-gray-300 no-underline hover:text-color-white-solid transition-colors">
                         (415) 379-7119
                       </a>
                     </div>
                     <div className="flex items-center justify-center gap-2">
-                      <MailIcon className="text-orange-600" />
-                      <a href="mailto:support@theartbistro.site" className="text-gray-300 no-underline hover:text-white transition-colors">
+                      <MailIcon className="text-amber-500" />
+                      <a href="mailto:support@theartbistro.site" className="text-gray-300 no-underline hover:text-color-white-solid transition-colors">
                         support@theartbistro.site
                       </a>
                     </div>
@@ -370,9 +370,9 @@ const Menu = () => {
                 <div className="text-center">
                   <h3 className="text-xl mb-4">More Information</h3>
                   <div className="flex flex-col gap-2">
-                    <Link to="/about" className="text-gray-300 no-underline hover:text-white transition-colors">Our Story</Link>
-                    <Link to="/menu" className="text-gray-300 no-underline hover:text-white transition-colors">Our Menu</Link>
-                    <Link to="/contact" className="text-gray-300 no-underline hover:text-white transition-colors">Contact</Link>
+                    <Link to="/about" className="text-gray-300 no-underline hover:text-color-white-solid transition-colors">Our Story</Link>
+                    <Link to="/menu" className="text-gray-300 no-underline hover:text-color-white-solid transition-colors">Our Menu</Link>
+                    <Link to="/contact" className="text-gray-300 no-underline hover:text-color-white-solid transition-colors">Contact</Link>
                   </div>
                 </div>
               </div>

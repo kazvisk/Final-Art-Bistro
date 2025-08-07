@@ -26,15 +26,15 @@ code {
 }
 
 /* Custom utility classes */
-.bg-neutral-700 { background-color: #404040; }
-.bg-color-white-solid { background-color: #FFFFFF; }
-.bg-color-grey-13 { background-color: #1A1A1A; }
-.bg-color-grey-95 { background-color: #F2F2F2; }
-.bg-color-spring-green-19 { background-color: #00FF88; }
-.text-color-white-solid { color: #FFFFFF; }
-.text-color-black-solid { color: #000000; }
-.text-color-grey-13 { color: #1A1A1A; }
-.text-color-spring-green-19 { color: #00FF88; }
+.bg-neutral-700 { background-color: #654321; }
+.bg-color-white-solid { background-color: #FFFFF0; }
+.bg-color-grey-13 { background-color: #3E2723; }
+.bg-color-grey-95 { background-color: #F8F6F1; }
+.bg-color-spring-green-19 { background-color: #6B8E23; }
+.text-color-white-solid { color: #FFFFF0; }
+.text-color-black-solid { color: #3E2723; }
+.text-color-grey-13 { color: #3E2723; }
+.text-color-spring-green-19 { color: #6B8E23; }
 
 .font-Ovo { font-family: 'Ovo', serif; }
 .font-Quicksand { font-family: 'Quicksand', sans-serif; }
@@ -92,40 +92,40 @@ code {
 .max-w-4xl { max-width: 56rem; }
 .z-10 { z-index: 10; }
 .border-b { border-bottom-width: 1px; }
-.border-white { border-color: #FFFFFF; }
+.border-white { border-color: #FFFFF0; }
 .opacity-40 { opacity: 0.4; }
 
-/* Gradient backgrounds */
+/* Gradient backgrounds - Updated for Modern Artisan palette */
 .bg-gradient-amber {
-  background: linear-gradient(135deg, #92400e, #b45309, #d97706);
+  background: linear-gradient(135deg, #654321, #8B4513, #A0522D);
 }
 
 .bg-gradient-amber-light {
-  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  background: linear-gradient(135deg, #F8F6F1, #FFFFF0);
 }
 
 .bg-gradient-amber-cards {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  background: linear-gradient(135deg, #FFB347, #DAA520);
 }
 
 .bg-gradient-amber-cards-2 {
-  background: linear-gradient(135deg, #f59e0b, #d97706);
+  background: linear-gradient(135deg, #DAA520, #B8860B);
 }
 
 /* Hero section styles */
 .hero-bg {
-  background: linear-gradient(135deg, #92400e, #b45309, #d97706);
+  background: linear-gradient(135deg, #654321, #8B4513, #A0522D);
 }
 
 .hero-overlay {
-  background-color: rgba(26, 26, 26, 0.4);
+  background-color: rgba(62, 39, 35, 0.4);
 }
 
 /* Card styles */
 .card {
-  background: #1A1A1A;
+  background: #3E2723;
   border-radius: 0.5rem;
-  border: 2px solid #1A1A1A;
+  border: 2px solid #3E2723;
   overflow: hidden;
 }
 
@@ -135,7 +135,7 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #FFFFF0;
   font-size: 2.25rem;
   font-family: 'Ovo', serif;
 }
@@ -156,21 +156,21 @@ code {
 }
 
 .btn-white {
-  background: white;
-  color: #000000;
-  border-color: white;
+  background: #FFFFF0;
+  color: #3E2723;
+  border-color: #FFFFF0;
 }
 
 .btn-dark {
-  background: #404040;
-  color: white;
-  border-color: #404040;
+  background: #654321;
+  color: #FFFFF0;
+  border-color: #654321;
 }
 
 .btn-outline {
   background: transparent;
-  color: white;
-  border-color: white;
+  color: #FFFFF0;
+  border-color: #FFFFF0;
 }
 
 /* Responsive */

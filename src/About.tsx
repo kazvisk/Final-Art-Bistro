@@ -26,10 +26,10 @@ const About = () => {
     <div className="relative bg-neutral-700 font-sans">
       <div className="w-full min-h-screen bg-color-white-solid">
         {/* Announcement Bar */}
-        <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-color-white-solid border-b border-gray-200">
           <div className="px-20 py-2 text-center">
-            <p className="text-sm text-black font-medium">
-              Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • We are a cash-only business
+            <p className="text-sm text-color-black-solid font-medium">
+              Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-amber-600 hover:text-amber-700 transition-colors">(415) 379-7119</a> • We are a cash-only business
             </p>
           </div>
         </div>
@@ -49,16 +49,16 @@ const About = () => {
 
         {/* Scrolled Navigation - Only visible when scrolled */}
         {isScrolled && (
-          <nav className="bg-gray-800 px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50 animate-slideDown font-sans" style={{marginTop: '32px'}}>
+          <nav className="bg-neutral-700 px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50 animate-slideDown font-sans" style={{marginTop: '32px'}}>
             <div className="flex justify-between items-center">
-              <Link to="/" className="text-2xl font-bold text-orange-600 no-underline">
+              <Link to="/" className="text-2xl font-bold text-amber-500 no-underline">
                 The Art Bistro
               </Link>
               <div className="flex gap-8">
-                <Link to="/" className="text-white no-underline font-bold text-xl">Home</Link>
-                <Link to="/about" className="text-white no-underline font-bold text-xl">About Us</Link>
-                <Link to="/menu" className="text-white no-underline font-bold text-xl">Menu</Link>
-                <Link to="/contact" className="text-white no-underline font-bold text-xl">Contact</Link>
+                <Link to="/" className="text-color-white-solid no-underline font-bold text-xl">Home</Link>
+                <Link to="/about" className="text-color-white-solid no-underline font-bold text-xl">About Us</Link>
+                <Link to="/menu" className="text-color-white-solid no-underline font-bold text-xl">Menu</Link>
+                <Link to="/contact" className="text-color-white-solid no-underline font-bold text-xl">Contact</Link>
               </div>
             </div>
           </nav>
@@ -78,13 +78,13 @@ const About = () => {
         </section>
 
         {/* About Content Section */}
-        <section className="py-20 px-8 bg-white">
+        <section className="py-20 px-8 bg-color-white-solid">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-5xl mb-6 text-gray-800 font-Ovo">
+              <h2 className="text-5xl mb-6 text-color-grey-13 font-Ovo">
                 From Our Hearts to Yours
               </h2>
-              <div className="w-15 h-1 bg-orange-600 mx-auto mb-8"></div>
+              <div className="w-15 h-1 bg-amber-600 mx-auto mb-8"></div>
             </div>
             
             <div className="prose prose-lg mx-auto text-gray-700 leading-relaxed">
