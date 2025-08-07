@@ -1,23 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FiPhone, FiDollarSign, FiCoffee, FiImage, FiUsers, FiMail } from 'react-icons/fi';
+
+// Create wrapper components to fix TypeScript issues
+const PhoneIcon = FiPhone as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const DollarIcon = FiDollarSign as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const CoffeeIcon = FiCoffee as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const ImageIcon = FiImage as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const UsersIcon = FiUsers as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const MailIcon = FiMail as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 const Home = () => {
   // Reviews data
   const reviews = [
     {
-      text: "The Art Bistro is my favorite place to work and relax. The coffee is exceptional, and the artistic atmosphere is truly inspiring. I love how they showcase local artists!",
-      author: "Sarah M., Local Artist",
-      rating: "★★★★★"
+      text: "The bagels and croissants are absolutely delicious, and the iced Thai tea is fantastic! The staff are super friendly, and best of all, the prices are unbeatable—easily the best deal in SF!",
+      author: "Jevgemija M.",
+      rating: "★★★★★",
+      source: "Google Reviews"
     },
     {
-      text: "Amazing coffee and such a creative environment! The baristas are knowledgeable and the pastries are freshly made daily. It's become my go-to spot for meetings.",
-      author: "Michael R., Entrepreneur",
-      rating: "★★★★★"
+      text: "I had the BLT sandwich with added turkey on a jalapeño and cheddar bagel. It's the best bagel sandwich I've eaten!! The gal that attended me was super friendly. Lots of people came in and out while I was there. Super affordable too. Highly recommend!",
+      author: "Elizabeth F.",
+      rating: "★★★★★",
+      source: "Yelp"
     },
     {
-      text: "What a gem! The atmosphere is perfect for studying, and their specialty drinks are incredible. The rotating art exhibitions keep it fresh and interesting every visit.",
-      author: "Emma L., Graduate Student",
-      rating: "★★★★★"
+      text: "A hidden gem! Recently visited this little cafe with a local regular. The breakfast sandwiches and coffee are phenomenal!\n\nThe owner is just the sweetest! She greeted everyone with the warmest smile and acknowledged regular customers by name. Even more impressive, she remembers their orders!\n\nThey have truly mastered the art of amazing customer service!",
+      author: "Jeni T.",
+      rating: "★★★★★",
+      source: "Google Reviews"
     }
   ];
 
@@ -49,7 +61,7 @@ const Home = () => {
        <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
          <div className="px-20 py-2 text-center">
            <p className="text-sm text-black font-medium">
-             📞 Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • 💵 We are a cash-only business
+             Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • We are a cash-only business
            </p>
          </div>
        </div>
@@ -119,7 +131,9 @@ const Home = () => {
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-8 bg-gray-50 rounded-lg">
-              <div className="text-5xl mb-4">☕</div>
+                        <div className="text-5xl mb-4 text-orange-600 flex justify-center">
+            <CoffeeIcon />
+          </div>
               <h3 className="text-2xl mb-4 text-gray-800">
                 Fresh Daily
               </h3>
@@ -128,7 +142,9 @@ const Home = () => {
               </p>
             </div>
             <div className="text-center p-8 bg-gray-50 rounded-lg">
-              <div className="text-5xl mb-4">🎨</div>
+                        <div className="text-5xl mb-4 text-orange-600 flex justify-center">
+            <ImageIcon />
+          </div>
               <h3 className="text-2xl mb-4 text-gray-800">
                 Local Artists
               </h3>
@@ -137,7 +153,9 @@ const Home = () => {
               </p>
             </div>
             <div className="text-center p-8 bg-gray-50 rounded-lg">
-              <div className="text-5xl mb-4">👥</div>
+                        <div className="text-5xl mb-4 text-orange-600 flex justify-center">
+            <UsersIcon />
+          </div>
               <h3 className="text-2xl mb-4 text-gray-800">
                 Community
               </h3>
@@ -163,19 +181,19 @@ const Home = () => {
              </p>
            </div>
            
-           {/* Google Maps Embed */}
-           <div className="bg-white rounded-lg overflow-hidden shadow-lg mb-12">
-             <iframe
-               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.342280625182!2d-122.49347207491203!3d37.782017563511545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085870768cda713%3A0x4a91c17def119769!2s2960%20Clement%20St%2C%20San%20Francisco%2C%20CA%2094121%2C%20USA!5e0!3m2!1sen!2sca!4v1754286570996!5m2!1sen!2sca"
-               width="100%"
-               height="450"
-               style={{ border: 0 }}
-               allowFullScreen
-               loading="lazy"
-               referrerPolicy="no-referrer-when-downgrade"
-               title="The Art Bistro Location"
-             ></iframe>
-           </div>
+                     {/* Google Maps Embed */}
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg mb-12">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.342280625182!2d-122.49347208!3d37.78201756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085870768cda713%3A0x4a91c17def119769!2sThe%20Art%20Bistro%2C%202960%20Clement%20St%2C%20San%20Francisco%2C%20CA%2094121%2C%20USA!5e0!3m2!1sen!2sca!4v1754286570996!5m2!1sen!2sca"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="The Art Bistro Location"
+            ></iframe>
+          </div>
            
                        {/* Text Information - Centered */}
             <div className="text-center space-y-6">
@@ -188,6 +206,11 @@ const Home = () => {
                 >
                   Get Directions
                 </a>
+              </div>
+              
+              {/* Visual separator */}
+              <div className="flex items-center justify-center" style={{marginTop: '3rem', marginBottom: '3rem'}}>
+                <div className="w-20 h-1 bg-orange-600 rounded"></div>
               </div>
               
               <h3 className="text-4xl font-bold text-gray-800 mb-4">
@@ -269,7 +292,6 @@ const Home = () => {
           </div>
           
           <div className="bg-gray-50 rounded-2xl p-12 text-center">
-            <div className="text-5xl text-orange-600 mb-4">"</div>
             <p className="text-xl text-gray-800 mb-8 leading-relaxed italic">
               "{reviews[currentReview].text}"
             </p>
@@ -279,6 +301,11 @@ const Home = () => {
             <p className="text-lg font-bold text-gray-800">
               - {reviews[currentReview].author}
             </p>
+            {reviews[currentReview].source && (
+              <p className="text-sm text-gray-500 mt-2 font-medium">
+                via {reviews[currentReview].source}
+              </p>
+            )}
             
             {/* Navigation */}
             <div className="flex items-center justify-center gap-4 mt-8">
@@ -310,6 +337,34 @@ const Home = () => {
             </div>
           </div>
         </div>
+        
+        {/* Review Links Section */}
+        <div className="text-center mt-12">
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">
+            Want to see more? Read what our community is saying!
+          </h3>
+          <p className="text-lg text-gray-600 mb-8">
+            Join hundreds of happy customers sharing their Art Bistro experiences
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://www.google.com/search?sca_esv=50347784169c3c85&sxsrf=AE3TifMkBhqDBD1uRnh17EvUHu2aqUavVA:1754531830361&q=the+art+bistro+san+francisco&si=AMgyJEsVtO7Zu9YEyquic0WJtZiamUti8WlVIiHVse8gMEYClePBp8zpgXevFYu6UYZ7r4OY8Bw2su2l0GO_RkqadsWifDyWbei_8aZsr77xksIY4kBFtnf9GnqYvqJQHDGimTMF_ufq&sa=X&sqi=2&ved=2ahUKEwjfv_uzzPeOAxXPFjQIHSRjC4gQrrQLegQIHxAA&biw=1536&bih=695&dpr=1.25"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors"
+            >
+              Read Google Reviews
+            </a>
+            <a
+              href="https://www.yelp.ca/biz/the-art-bistro-san-francisco#reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors"
+            >
+              Read Yelp Reviews
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
@@ -338,13 +393,13 @@ const Home = () => {
               <h3 className="text-xl mb-4">Contact Us</h3>
               <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-center gap-2">
-                  <span className="text-orange-600">📞</span>
+                                     <PhoneIcon className="text-orange-600" />
                   <a href="tel:+14153797119" className="text-gray-300 no-underline hover:text-white transition-colors">
                     (415) 379-7119
                   </a>
                 </div>
                 <div className="flex items-center justify-center gap-2">
-                  <span className="text-orange-600">✉️</span>
+                                     <MailIcon className="text-orange-600" />
                   <a href="mailto:support@theartbistro.site" className="text-gray-300 no-underline hover:text-white transition-colors">
                     support@theartbistro.site
                   </a>

@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FiPhone, FiDollarSign, FiImage, FiCoffee, FiMail } from 'react-icons/fi';
+
+// Create wrapper components to fix TypeScript issues
+const PhoneIcon = FiPhone as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const DollarIcon = FiDollarSign as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const ImageIcon = FiImage as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const CoffeeIcon = FiCoffee as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const MailIcon = FiMail as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 const About = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,9 +28,9 @@ const About = () => {
         {/* Announcement Bar */}
         <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
           <div className="px-20 py-2 text-center">
-                       <p className="text-sm text-black font-medium">
-             📞 Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • 💵 We are a cash-only business
-           </p>
+            <p className="text-sm text-black font-medium">
+              Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • We are a cash-only business
+            </p>
           </div>
         </div>
 
@@ -122,28 +130,23 @@ const About = () => {
               <div className="w-15 h-1 bg-orange-600 mx-auto mb-8"></div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="text-center">
-                <div className="text-6xl mb-6">🤝</div>
-                <h3 className="text-2xl mb-4 text-gray-800 font-Ovo">Community First</h3>
+                <div className="text-6xl mb-6 text-orange-600 flex justify-center">
+                  <ImageIcon />
+                </div>
+                <h3 className="text-2xl mb-4 text-gray-800">Artistic Atmosphere</h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  We believe in the power of bringing people together. Every decision we make is guided by how it serves our community and creates meaningful connections.
+                  Our space is designed to inspire creativity, with rotating art exhibitions and a warm, welcoming environment.
                 </p>
               </div>
-              
               <div className="text-center">
-                <div className="text-6xl mb-6">🎨</div>
-                <h3 className="text-2xl mb-4 text-gray-800 font-Ovo">Creativity Matters</h3>
+                <div className="text-6xl mb-6 text-orange-600 flex justify-center">
+                  <CoffeeIcon />
+                </div>
+                <h3 className="text-2xl mb-4 text-gray-800">Quality Coffee</h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Art and creativity are essential to the human spirit. We celebrate and support local artists, providing a platform for their work to be seen and appreciated.
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-6xl mb-6">☕</div>
-                <h3 className="text-2xl mb-4 text-gray-800 font-Ovo">Quality Always</h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  From our coffee beans to our pastries, we never compromise on quality. Every ingredient is chosen with care and every item is crafted with passion.
+                  We source the finest beans and craft each cup with care, ensuring every sip is a moment of pure enjoyment.
                 </p>
               </div>
             </div>
@@ -196,13 +199,13 @@ const About = () => {
                 <h3 className="text-xl mb-4">Contact Us</h3>
                 <div className="flex flex-col gap-2">
                   <div className="flex items-center justify-center gap-2">
-                    <span className="text-orange-600">📞</span>
+                    <PhoneIcon className="text-orange-600" />
                     <a href="tel:+14153797119" className="text-gray-300 no-underline hover:text-white transition-colors">
                       (415) 379-7119
                     </a>
                   </div>
                   <div className="flex items-center justify-center gap-2">
-                    <span className="text-orange-600">✉️</span>
+                    <MailIcon className="text-orange-600" />
                     <a href="mailto:support@theartbistro.site" className="text-gray-300 no-underline hover:text-white transition-colors">
                       support@theartbistro.site
                     </a>

@@ -1,5 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiPhone, FiMail } from 'react-icons/fi';
+
+// Create wrapper components for footer icons only
+const PhoneIcon = FiPhone as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const MailIcon = FiMail as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 const Menu = () => {
   const menuItems = {
@@ -95,7 +100,7 @@ const Menu = () => {
         <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
           <div className="px-20 py-2 text-center">
                        <p className="text-sm text-black font-medium">
-             📞 Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • 💵 We are a cash-only business
+                           Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • We are a cash-only business
            </p>
           </div>
         </div>
@@ -128,7 +133,9 @@ const Menu = () => {
           {/* Coffee Section */}
           <div style={{marginBottom: '2.5rem'}}>
             <div className="text-center mb-12">
-              <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>☕ Espresso Bar</div>
+              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+                Espresso Bar
+              </div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">All drinks available iced, decaf, or any way you like</div>
             </div>
             <div className="space-y-4">
@@ -147,7 +154,9 @@ const Menu = () => {
           {/* The Uncoffees Section */}
           <div style={{marginBottom: '2.5rem'}}>
             <div className="text-center mb-12">
-              <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🍵 The Uncoffees</div>
+              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+                The Uncoffees
+              </div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Warm, comforting beverages without the caffeine</div>
             </div>
             <div className="space-y-4">
@@ -175,7 +184,9 @@ const Menu = () => {
           {/* Blended Frappes Section */}
           <div style={{marginBottom: '2.5rem'}}>
             <div className="text-center mb-12">
-              <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🥤 Blended Frappes</div>
+              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+                Blended Frappes
+              </div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Cool, creamy blended drinks perfect for any season, available regular or decaf</div>
             </div>
             <div className="space-y-4">
@@ -203,7 +214,9 @@ const Menu = () => {
           {/* Creative Extras Section */}
           <div style={{marginBottom: '2.5rem'}}>
             <div className="text-center mb-12">
-              <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>✨ Creative Extras</div>
+              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+                Creative Extras
+              </div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Customize your perfect drink with our add-ons</div>
             </div>
             <div className="space-y-4">
@@ -220,7 +233,9 @@ const Menu = () => {
           {/* Herb Teas Section */}
           <div style={{marginBottom: '2.5rem'}}>
             <div className="text-center mb-12">
-              <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🌿 Herb Teas</div>
+              <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+                Herb Teas
+              </div>
               <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Soothing herbal blends for relaxation and wellness</div>
             </div>
             <div className="space-y-4">
@@ -237,7 +252,9 @@ const Menu = () => {
                      {/* Bagels Section */}
            <div style={{marginBottom: '2.5rem'}}>
              <div className="text-center mb-12">
-               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🥯 Bagels</div>
+               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+                 Bagels
+               </div>
                                <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Served on freshly made Asiago, All Seeded, Sesame, Plain, Cinnamon Raisin, or Whole Wheat bagels</div>
              </div>
             <div className="space-y-4">
@@ -254,7 +271,9 @@ const Menu = () => {
                      {/* Croissants Section */}
            <div style={{marginBottom: '2.5rem'}}>
              <div className="text-center mb-12">
-               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🥐 Croissants</div>
+               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+                 Croissants
+               </div>
                <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Buttery, flaky French pastries baked daily</div>
              </div>
              <div className="space-y-4">
@@ -271,7 +290,9 @@ const Menu = () => {
                        {/* Food Extras Section */}
             <div style={{marginBottom: '0.5rem'}}>
              <div className="text-center mb-12">
-                               <div className="text-color-grey-13 font-normal font-Ovo mb-4" style={{color: '#D2691E', fontSize: '3rem'}}>🔧 Custom Add-Ons</div>
+                               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#D2691E', fontSize: '3rem'}}>
+                 Custom Add-Ons
+               </div>
                <div className="text-color-grey-13 text-2xl font-normal font-Quicksand">Customize your bagel or croissant with these delicious add-ons</div>
              </div>
              <div className="space-y-4">
@@ -331,13 +352,13 @@ const Menu = () => {
                   <h3 className="text-xl mb-4">Contact Us</h3>
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center justify-center gap-2">
-                      <span className="text-orange-600">📞</span>
+                      <PhoneIcon className="text-orange-600" />
                       <a href="tel:+14153797119" className="text-gray-300 no-underline hover:text-white transition-colors">
                         (415) 379-7119
                       </a>
                     </div>
                     <div className="flex items-center justify-center gap-2">
-                      <span className="text-orange-600">✉️</span>
+                      <MailIcon className="text-orange-600" />
                       <a href="mailto:support@theartbistro.site" className="text-gray-300 no-underline hover:text-white transition-colors">
                         support@theartbistro.site
                       </a>

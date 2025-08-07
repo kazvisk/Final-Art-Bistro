@@ -1,5 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiPhone, FiMail } from 'react-icons/fi';
+
+// Create wrapper components for footer icons only
+const PhoneIcon = FiPhone as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const MailIcon = FiMail as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 const Contact = () => {
   return (
@@ -8,9 +13,9 @@ const Contact = () => {
         {/* Announcement Bar */}
         <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
           <div className="px-20 py-2 text-center">
-                       <p className="text-sm text-black font-medium">
-             📞 Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • 💵 We are a cash-only business
-           </p>
+            <p className="text-sm text-black font-medium">
+              Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-orange-600 hover:text-orange-700 transition-colors">(415) 379-7119</a> • We are a cash-only business
+            </p>
           </div>
         </div>
 
@@ -78,36 +83,27 @@ const Contact = () => {
                  <div className="bg-gray-50 p-10 rounded-lg h-96 flex flex-col">
                    <h3 className="text-4xl mb-8 text-gray-800 font-sans">Visit Us</h3>
                    <div className="space-y-6 flex-grow">
-                     <div className="flex items-start gap-5">
-                       <div className="text-3xl">📍</div>
-                       <div>
-                         <p className="text-xl font-semibold text-gray-800">Address</p>
-                         <p className="text-lg text-gray-600">
-                           2960 Clement St<br/>
-                           San Francisco, CA 94121
-                         </p>
-                       </div>
-                     </div>
+                                         <div>
+                      <p className="text-xl font-semibold text-gray-800">Address</p>
+                      <p className="text-lg text-gray-600">
+                        2960 Clement St<br/>
+                        San Francisco, CA 94121
+                      </p>
+                    </div>
                      
-                     <div className="flex items-start gap-5">
-                       <div className="text-3xl">📞</div>
-                       <div>
-                         <p className="text-xl font-semibold text-gray-800">Phone</p>
-                         <a href="tel:+14153797119" className="text-lg text-orange-600 hover:text-orange-700 transition-colors">
-                           (415) 379-7119
-                         </a>
-                       </div>
-                     </div>
+                                         <div>
+                      <p className="text-xl font-semibold text-gray-800">Phone</p>
+                      <a href="tel:+14153797119" className="text-lg text-orange-600 hover:text-orange-700 transition-colors">
+                        (415) 379-7119
+                      </a>
+                    </div>
                      
-                     <div className="flex items-start gap-5">
-                       <div className="text-3xl">✉️</div>
-                       <div>
-                         <p className="text-xl font-semibold text-gray-800">Email</p>
-                         <a href="mailto:support@theartbistro.site" className="text-lg text-orange-600 hover:text-orange-700 transition-colors">
-                           support@theartbistro.site
-                         </a>
-                       </div>
-                     </div>
+                                         <div>
+                      <p className="text-xl font-semibold text-gray-800">Email</p>
+                      <a href="mailto:support@theartbistro.site" className="text-lg text-orange-600 hover:text-orange-700 transition-colors">
+                        support@theartbistro.site
+                      </a>
+                    </div>
                    </div>
                  </div>
 
@@ -125,34 +121,22 @@ const Contact = () => {
                  <div className="bg-gray-50 p-10 rounded-lg h-[28rem] flex flex-col">
                    <h3 className="text-4xl mb-8 text-gray-800 font-sans">Why Visit Us?</h3>
                    <div className="space-y-6 flex-grow">
-                     <div className="flex items-start gap-4">
-                       <div className="text-3xl">☕</div>
-                       <div>
-                         <h4 className="text-xl font-semibold text-gray-800">Artisanal Coffee</h4>
-                         <p className="text-lg text-gray-600">Handcrafted coffee with locally sourced beans</p>
-                       </div>
-                     </div>
-                     <div className="flex items-start gap-4">
-                       <div className="text-3xl">🎨</div>
-                       <div>
-                         <h4 className="text-xl font-semibold text-gray-800">Local Art</h4>
-                         <p className="text-lg text-gray-600">Rotating exhibitions from local artists</p>
-                       </div>
-                     </div>
-                     <div className="flex items-start gap-4">
-                       <div className="text-3xl">👥</div>
-                       <div>
-                         <h4 className="text-xl font-semibold text-gray-800">Community</h4>
-                         <p className="text-lg text-gray-600">A welcoming space for artists and coffee lovers</p>
-                       </div>
-                     </div>
-                     <div className="flex items-start gap-4">
-                       <div className="text-3xl">🥪</div>
-                       <div>
-                         <h4 className="text-xl font-semibold text-gray-800">Fresh Sandwiches</h4>
-                         <p className="text-lg text-gray-600">Fresh bagels and croissants daily</p>
-                       </div>
-                     </div>
+                                         <div>
+                      <h4 className="text-xl font-semibold text-gray-800">Artisanal Coffee</h4>
+                      <p className="text-lg text-gray-600">Handcrafted coffee with locally sourced beans</p>
+                    </div>
+                                         <div>
+                      <h4 className="text-xl font-semibold text-gray-800">Local Art</h4>
+                      <p className="text-lg text-gray-600">Rotating exhibitions from local artists</p>
+                    </div>
+                                         <div>
+                      <h4 className="text-xl font-semibold text-gray-800">Community</h4>
+                      <p className="text-lg text-gray-600">A welcoming space for artists and coffee lovers</p>
+                    </div>
+                                         <div>
+                      <h4 className="text-xl font-semibold text-gray-800">Fresh Sandwiches</h4>
+                      <p className="text-lg text-gray-600">Fresh bagels and croissants daily</p>
+                    </div>
                    </div>
                  </div>
 
@@ -239,13 +223,13 @@ const Contact = () => {
                 <h3 className="text-xl mb-4">Contact Us</h3>
                 <div className="flex flex-col gap-2">
                   <div className="flex items-center justify-center gap-2">
-                    <span className="text-orange-600">📞</span>
+                    <PhoneIcon className="text-orange-600" />
                     <a href="tel:+14153797119" className="text-gray-300 no-underline hover:text-white transition-colors">
                       (415) 379-7119
                     </a>
                   </div>
                   <div className="flex items-center justify-center gap-2">
-                    <span className="text-orange-600">✉️</span>
+                    <MailIcon className="text-orange-600" />
                     <a href="mailto:support@theartbistro.site" className="text-gray-300 no-underline hover:text-white transition-colors">
                       support@theartbistro.site
                     </a>
