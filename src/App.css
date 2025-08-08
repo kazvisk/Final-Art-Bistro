@@ -1,4 +1,9 @@
 /* Custom styles for Art Bistro */
+html {
+  scroll-padding-top: 140px; /* This accounts for the fixed header height plus some padding */
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
 }
@@ -11,14 +16,12 @@
 }
 
 .menu-item-name {
-  background: white;
   padding-right: 8px;
   z-index: 2;
   position: relative;
 }
 
 .menu-item-price {
-  background: white;
   padding-left: 8px;
   z-index: 2;
   position: relative;

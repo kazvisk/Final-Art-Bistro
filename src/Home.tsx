@@ -291,7 +291,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="bg-color-grey-95 rounded-2xl p-12 text-center">
+          <div className="bg-color-white-solid rounded-2xl p-12 text-center shadow-lg border border-gray-200">
             <p className="text-xl text-color-grey-13 mb-8 leading-relaxed italic">
               "{reviews[currentReview].text}"
             </p>

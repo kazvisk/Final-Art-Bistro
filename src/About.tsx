@@ -163,11 +163,11 @@ const About = () => {
               We'd love to welcome you into our community and share a cup of coffee together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/menu" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
-                Explore Our Menu
+              <Link to="/" className="inline-block bg-amber-600 hover:bg-amber-700 text-color-white-solid px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
+                Back to Home
               </Link>
-              <Link to="/" className="inline-block bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
-                Visit Our Home
+              <Link to="/menu" className="inline-block bg-neutral-700 hover:bg-gray-900 text-color-white-solid px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
+                Explore Our Menu
               </Link>
             </div>
           </div>

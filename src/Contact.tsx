@@ -181,14 +181,14 @@ const Contact = () => {
          <section className="py-20 px-8 bg-amber-50">
            <div className="max-w-4xl mx-auto text-center">
                            <h2 className="text-4xl mb-6 text-color-grey-13 font-sans">
-                Ready to Visit?
+                Come Share a Cup With Us
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                We can't wait to welcome you to The Art Bistro family!
+                Where every visit feels like coming home to friends, art, and the perfect cup of coffee
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/menu" className="inline-block bg-amber-600 hover:bg-amber-700 text-color-white-solid px-8 py-4 rounded-lg text-lg font-medium font-sans transition-colors">
-                  Explore Our Menu
+                <Link to="/" className="inline-block bg-amber-600 hover:bg-amber-700 text-color-white-solid px-8 py-4 rounded-lg text-lg font-medium font-sans transition-colors">
+                  Back to Home
                 </Link>
                 <Link to="/about" className="inline-block bg-neutral-700 hover:bg-gray-900 text-color-white-solid px-8 py-4 rounded-lg text-lg font-medium font-sans transition-colors">
                   Learn Our Story

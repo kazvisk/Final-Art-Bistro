@@ -130,9 +130,30 @@ const Menu = () => {
             </div>
           </div>
 
+          {/* Menu Navigation */}
+          <div className="text-center mb-16">
+            <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+              <a href="#espresso" className="text-lg text-amber-600 hover:text-amber-700 transition-colors font-medium">Espresso Bar</a>
+              <span className="text-gray-400">•</span>
+              <a href="#uncoffees" className="text-lg text-amber-600 hover:text-amber-700 transition-colors font-medium">The Uncoffees</a>
+              <span className="text-gray-400">•</span>
+              <a href="#frappes" className="text-lg text-amber-600 hover:text-amber-700 transition-colors font-medium">Blended Frappes</a>
+              <span className="text-gray-400">•</span>
+              <a href="#extras" className="text-lg text-amber-600 hover:text-amber-700 transition-colors font-medium">Creative Extras</a>
+              <span className="text-gray-400">•</span>
+              <a href="#teas" className="text-lg text-amber-600 hover:text-amber-700 transition-colors font-medium">Herb Teas</a>
+              <span className="text-gray-400">•</span>
+              <a href="#bagels" className="text-lg text-amber-600 hover:text-amber-700 transition-colors font-medium">Bagels</a>
+              <span className="text-gray-400">•</span>
+              <a href="#croissants" className="text-lg text-amber-600 hover:text-amber-700 transition-colors font-medium">Croissants</a>
+              <span className="text-gray-400">•</span>
+              <a href="#addons" className="text-lg text-amber-600 hover:text-amber-700 transition-colors font-medium">Add-Ons</a>
+            </div>
+          </div>
+
           {/* Coffee Section */}
           <div style={{marginBottom: '2.5rem'}}>
-            <div className="text-center mb-12">
+            <div id="espresso" className="text-center mb-12">
               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                 Espresso Bar
               </div>
@@ -143,8 +164,8 @@ const Menu = () => {
                 <div key={index} className="menu-item-container">
                   <span className="menu-item-name text-color-grey-13 text-xl font-bold font-Ovo">{item.name}</span>
                   <div className="menu-item-dots"></div>
-                  <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#A0522D'}}>
-                    <span className="text-lg font-bold bg-amber-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-amber-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}{item.prices.large && <><span className="mx-2">|</span> <span className="text-lg font-bold bg-amber-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>}
+                  <div className="menu-item-price text-lg font-bold font-Ovo" style={{color: '#D2691E'}}>
+                    <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">S</span> {item.prices.small} <span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">M</span> {item.prices.medium}{item.prices.large && <><span className="mx-2">|</span> <span className="text-lg font-bold bg-orange-100 px-2 py-1 rounded mr-1">L</span> {item.prices.large}</>}
                   </div>
                 </div>
               ))}
@@ -153,7 +174,7 @@ const Menu = () => {
 
           {/* The Uncoffees Section */}
           <div style={{marginBottom: '2.5rem'}}>
-            <div className="text-center mb-12">
+            <div id="uncoffees" className="text-center mb-12">
               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                 The Uncoffees
               </div>
@@ -183,7 +204,7 @@ const Menu = () => {
 
           {/* Blended Frappes Section */}
           <div style={{marginBottom: '2.5rem'}}>
-            <div className="text-center mb-12">
+            <div id="frappes" className="text-center mb-12">
               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                 Blended Frappes
               </div>
@@ -213,7 +234,7 @@ const Menu = () => {
 
           {/* Creative Extras Section */}
           <div style={{marginBottom: '2.5rem'}}>
-            <div className="text-center mb-12">
+            <div id="extras" className="text-center mb-12">
               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                 Creative Extras
               </div>
@@ -232,7 +253,7 @@ const Menu = () => {
 
           {/* Herb Teas Section */}
           <div style={{marginBottom: '2.5rem'}}>
-            <div className="text-center mb-12">
+            <div id="teas" className="text-center mb-12">
               <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                 Herb Teas
               </div>
@@ -251,7 +272,7 @@ const Menu = () => {
 
                      {/* Bagels Section */}
            <div style={{marginBottom: '2.5rem'}}>
-             <div className="text-center mb-12">
+             <div id="bagels" className="text-center mb-12">
                <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                  Bagels
                </div>
@@ -270,7 +291,7 @@ const Menu = () => {
 
                      {/* Croissants Section */}
            <div style={{marginBottom: '2.5rem'}}>
-             <div className="text-center mb-12">
+             <div id="croissants" className="text-center mb-12">
                <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                  Croissants
                </div>
@@ -289,7 +310,7 @@ const Menu = () => {
 
                        {/* Food Extras Section */}
             <div style={{marginBottom: '0.5rem'}}>
-             <div className="text-center mb-12">
+             <div id="addons" className="text-center mb-12">
                                <div className="text-color-grey-13 font-normal font-Ovo mb-4 text-center" style={{color: '#A0522D', fontSize: '3rem'}}>
                  Custom Add-Ons
                </div>
@@ -319,9 +340,9 @@ const Menu = () => {
                <Link to="/" className="inline-block bg-amber-600 hover:bg-amber-700 text-color-white-solid px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
                  Back to Home
                </Link>
-               <Link to="/about" className="inline-block bg-neutral-700 hover:bg-gray-900 text-color-white-solid px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
-                 About Us
-               </Link>
+                             <Link to="/about" className="inline-block bg-neutral-700 hover:bg-gray-900 text-color-white-solid px-8 py-4 rounded-lg text-xl font-medium font-Quicksand transition-colors">
+                Learn Our Story
+              </Link>
              </div>
           </div>
         </section>
