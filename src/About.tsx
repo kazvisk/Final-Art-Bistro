@@ -125,7 +125,7 @@ const About = () => {
         </section>
 
                 {/* Footer */}
-        <footer className="bg-gray-800 text-white py-12 px-8" style={{fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'}}>
+        <footer className="bg-gray-800 text-white py-12 px-8 font-Quicksand">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               {/* Location & Hours */}
