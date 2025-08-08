@@ -1,6 +1,6 @@
 /* Custom styles for Art Bistro */
 html {
-  scroll-padding-top: 140px; /* This accounts for the fixed header height plus some padding */
+  scroll-padding-top: 120px; /* This accounts for the fixed header height plus some padding */
   scroll-behavior: smooth;
 }
 

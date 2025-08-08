@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiPhone, FiMail } from 'react-icons/fi';
+import Header from './components/Header';
 
 // Create wrapper components for footer icons only
 const PhoneIcon = FiPhone as React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -96,32 +97,10 @@ const Menu = () => {
     return (
         <div className="relative bg-neutral-700 font-sans">
       <div className="w-full min-h-screen bg-color-white-solid">
-                                    {/* Announcement Bar */}
-        <div className="fixed top-0 left-0 right-0 z-50 bg-color-white-solid border-b border-gray-200">
-          <div className="px-20 py-2 text-center">
-            <p className="text-sm text-color-black-solid font-medium">
-              Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-amber-600 hover:text-amber-700 transition-colors">(415) 379-7119</a> • We are a cash-only business
-            </p>
-          </div>
-        </div>
-
-                                                                         {/* Navigation */}
-            <nav className="bg-neutral-700 px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50 font-sans" style={{marginTop: '32px'}}>
-            <div className="flex justify-between items-center">
-              <Link to="/" className="text-2xl font-bold text-amber-500 no-underline">
-                The Art Bistro
-              </Link>
-              <div className="flex gap-8">
-                <Link to="/" className="text-color-white-solid no-underline font-bold text-xl">Home</Link>
-                <Link to="/about" className="text-color-white-solid no-underline font-bold text-xl">About Us</Link>
-                <Link to="/menu" className="text-color-white-solid no-underline font-bold text-xl">Menu</Link>
-                <Link to="/contact" className="text-color-white-solid no-underline font-bold text-xl">Contact</Link>
-              </div>
-            </div>
-          </nav>
+        <Header />
 
                  {/* Menu Hero Section */}
-         <div className="max-w-1280 mx-auto bg-color-white-solid rounded-lg my-20 px-20 py-20" style={{marginTop: '140px'}}>
+         <div className="max-w-1280 mx-auto bg-color-white-solid rounded-lg my-20 px-20 py-20">
           <div className="text-center" style={{marginBottom: '5rem'}}>
             <div className="text-color-grey-13 font-normal font-Ovo mb-6" style={{fontSize: '4.5rem'}}>Our Menu</div>
             <div className="text-color-grey-13 text-2xl font-normal font-Quicksand max-w-2xl mx-auto">

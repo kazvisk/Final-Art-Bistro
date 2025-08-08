@@ -1,68 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiPhone, FiDollarSign, FiImage, FiCoffee, FiMail } from 'react-icons/fi';
+import { FiPhone, FiImage, FiCoffee, FiMail } from 'react-icons/fi';
+import Header from './components/Header';
 
 // Create wrapper components to fix TypeScript issues
 const PhoneIcon = FiPhone as React.ComponentType<React.SVGProps<SVGSVGElement>>;
-const DollarIcon = FiDollarSign as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 const ImageIcon = FiImage as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 const CoffeeIcon = FiCoffee as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 const MailIcon = FiMail as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 const About = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Get the height of the viewport (hero section)
-      const heroHeight = window.innerHeight;
-      setIsScrolled(window.scrollY > heroHeight);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
   return (
     <div className="relative bg-neutral-700 font-sans">
       <div className="w-full min-h-screen bg-color-white-solid">
-        {/* Announcement Bar */}
-        <div className="fixed top-0 left-0 right-0 z-50 bg-color-white-solid border-b border-gray-200">
-          <div className="px-20 py-2 text-center">
-            <p className="text-sm text-color-black-solid font-medium">
-              Pickup orders can be made by phone call at <a href="tel:+14153797119" className="text-amber-600 hover:text-amber-700 transition-colors">(415) 379-7119</a> • We are a cash-only business
-            </p>
-          </div>
-        </div>
-
-        {/* Simple Text Navigation - Always visible */}
-        <nav className="fixed top-0 left-0 right-0 z-50 px-20 py-8 flex justify-between items-center font-sans" style={{marginTop: '32px'}}>
-          <Link to="/" className="text-2xl font-bold text-white no-underline drop-shadow-lg">
-            The Art Bistro
-          </Link>
-          <div className="flex gap-8 items-center">
-            <Link to="/" className="text-white no-underline font-medium text-xl drop-shadow-md">Home</Link>
-            <Link to="/about" className="text-white no-underline font-medium text-xl drop-shadow-md">About Us</Link>
-            <Link to="/menu" className="text-white no-underline font-medium text-xl drop-shadow-md">Menu</Link>
-            <Link to="/contact" className="text-white no-underline font-medium text-xl drop-shadow-md">Contact</Link>
-          </div>
-        </nav>
-
-        {/* Scrolled Navigation - Only visible when scrolled */}
-        {isScrolled && (
-          <nav className="bg-neutral-700 px-20 py-8 shadow-md fixed top-0 left-0 right-0 z-50 animate-slideDown font-sans" style={{marginTop: '32px'}}>
-            <div className="flex justify-between items-center">
-              <Link to="/" className="text-2xl font-bold text-amber-500 no-underline">
-                The Art Bistro
-              </Link>
-              <div className="flex gap-8">
-                <Link to="/" className="text-color-white-solid no-underline font-bold text-xl">Home</Link>
-                <Link to="/about" className="text-color-white-solid no-underline font-bold text-xl">About Us</Link>
-                <Link to="/menu" className="text-color-white-solid no-underline font-bold text-xl">Menu</Link>
-                <Link to="/contact" className="text-color-white-solid no-underline font-bold text-xl">Contact</Link>
-              </div>
-            </div>
-          </nav>
-        )}
+        <Header transparent />
 
         {/* Hero Section with Image */}
         <section className="h-screen bg-cover bg-center flex items-center justify-center relative" style={{ backgroundImage: 'url(/owners.jpg)' }}>
