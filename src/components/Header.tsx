@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ transparent = false, showAnnouncement =
           className={`px-20 transition-all duration-300 ${
             transparent
               ? isScrolled
-                ? 'bg-neutral-700/90 backdrop-blur-sm shadow-md py-6'
+                ? 'bg-neutral-700 shadow-md py-6'
                 : 'bg-transparent shadow-none py-8'
               : 'bg-neutral-700 shadow-md py-8'
           }`}
