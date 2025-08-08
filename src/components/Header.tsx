@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
+import AnnouncementBar from './AnnouncementBar';
 
 const MenuIcon = FiMenu as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 const CloseIcon = FiX as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 type HeaderProps = {
   transparent?: boolean;
+  showAnnouncement?: boolean;
 };
 
-const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
+const Header: React.FC<HeaderProps> = ({ transparent = false, showAnnouncement = true }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -22,7 +24,10 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
 
   return (
     <>
-      <div className="fixed top-12 left-0 right-0 z-40">
+      {/* Announcement Bar (optional) */}
+      {showAnnouncement && <AnnouncementBar />}
+
+      <div className={`fixed ${showAnnouncement ? 'top-12' : 'top-0'} left-0 right-0 z-40`}>
         {/* Primary Navigation */}
         <nav
           className={`px-20 transition-all duration-300 ${
