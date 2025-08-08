@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 
@@ -11,6 +11,14 @@ type HeaderProps = {
 
 const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 0);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -32,30 +40,38 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
         </div>
 
         {/* Primary Navigation */}
-        <nav className={`${transparent ? 'bg-transparent shadow-none' : 'bg-neutral-700 shadow-md'} px-20 py-8`}>
+        <nav className={`${
+            transparent
+              ? isScrolled
+                ? 'bg-neutral-700/90 shadow-md'
+                : 'bg-transparent shadow-none'
+              : 'bg-neutral-700 shadow-md'
+          } px-20 py-8 transition-all duration-300 ease-out`}>
           <div className="flex justify-between items-center">
             <Link
               to="/"
-              className={`text-2xl font-bold no-underline ${transparent ? 'text-white drop-shadow-lg' : 'text-amber-500'}`}
+              className={`text-2xl font-bold no-underline ${
+                transparent && !isScrolled ? 'text-white drop-shadow-lg' : 'text-amber-500'
+              }`}
             >
               The Art Bistro
             </Link>
             <div className="hidden md:flex gap-8">
-              <Link to="/" className={`${transparent ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
+              <Link to="/" className={`${transparent && !isScrolled ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
                 Home
               </Link>
-              <Link to="/about" className={`${transparent ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
+              <Link to="/about" className={`${transparent && !isScrolled ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
                 About Us
               </Link>
-              <Link to="/menu" className={`${transparent ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
+              <Link to="/menu" className={`${transparent && !isScrolled ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
                 Menu
               </Link>
-              <Link to="/contact" className={`${transparent ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
+              <Link to="/contact" className={`${transparent && !isScrolled ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
                 Contact
               </Link>
             </div>
             <button
-              className={`md:hidden ${transparent ? 'text-white' : 'text-color-white-solid'}`}
+              className={`md:hidden ${transparent && !isScrolled ? 'text-white' : 'text-color-white-solid'}`}
               aria-label="Toggle menu"
               onClick={() => setIsMobileMenuOpen((v) => !v)}
             >
@@ -63,7 +79,9 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
             </button>
           </div>
           {isMobileMenuOpen && (
-            <div className={`md:hidden absolute left-0 right-0 ${transparent ? 'bg-neutral-800/95' : 'bg-neutral-700'} text-white shadow-lg`}>
+            <div className={`md:hidden absolute left-0 right-0 ${
+                transparent && !isScrolled ? 'bg-neutral-800/95' : 'bg-neutral-700'
+              } text-white shadow-lg transition-colors duration-300`}>
               <div className="px-6 py-4 flex flex-col gap-4">
                 <Link to="/" className="no-underline text-white text-lg" onClick={() => setIsMobileMenuOpen(false)}>
                   Home
