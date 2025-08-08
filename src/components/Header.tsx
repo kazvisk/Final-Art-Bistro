@@ -31,38 +31,36 @@ const Header: React.FC<HeaderProps> = ({ transparent = false, showAnnouncement =
         {/* Primary Navigation */}
         <nav
           className={`px-20 transition-all duration-300 ${
-            transparent
-              ? isScrolled
-                ? 'bg-neutral-700 shadow-md py-6'
-                : 'bg-transparent shadow-none py-8'
-              : 'bg-neutral-700 shadow-md py-8'
+            (!transparent || isScrolled || isMobileMenuOpen)
+              ? 'bg-neutral-700 shadow-md ' + (transparent ? 'py-6' : 'py-8')
+              : 'bg-transparent shadow-none py-8'
           }`}
         >
           <div className="flex justify-between items-center">
             <Link
               to="/"
               className={`text-2xl font-bold no-underline ${
-                transparent && !isScrolled ? 'text-white drop-shadow-lg' : 'text-amber-500'
+                transparent && !isScrolled && !isMobileMenuOpen ? 'text-white drop-shadow-lg' : 'text-amber-500'
               }`}
             >
               The Art Bistro
             </Link>
             <div className="hidden md:flex gap-8">
-              <Link to="/" className={`${transparent && !isScrolled ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
+              <Link to="/" className={`${transparent && !isScrolled && !isMobileMenuOpen ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
                 Home
               </Link>
-              <Link to="/about" className={`${transparent && !isScrolled ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
+              <Link to="/about" className={`${transparent && !isScrolled && !isMobileMenuOpen ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
                 About Us
               </Link>
-              <Link to="/menu" className={`${transparent && !isScrolled ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
+              <Link to="/menu" className={`${transparent && !isScrolled && !isMobileMenuOpen ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
                 Menu
               </Link>
-              <Link to="/contact" className={`${transparent && !isScrolled ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
+              <Link to="/contact" className={`${transparent && !isScrolled && !isMobileMenuOpen ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
                 Contact
               </Link>
             </div>
             <button
-              className={`md:hidden ${transparent && !isScrolled ? 'text-white' : 'text-color-white-solid'}`}
+              className={`md:hidden ${transparent && !isScrolled && !isMobileMenuOpen ? 'text-white' : 'text-color-white-solid'}`}
               aria-label="Toggle menu"
               onClick={() => setIsMobileMenuOpen((v) => !v)}
             >
@@ -70,20 +68,18 @@ const Header: React.FC<HeaderProps> = ({ transparent = false, showAnnouncement =
             </button>
           </div>
           {isMobileMenuOpen && (
-            <div className={`md:hidden absolute left-0 right-0 ${
-              transparent && !isScrolled ? 'bg-neutral-800/95' : 'bg-neutral-700'
-            } text-white shadow-lg`}>
-              <div className="px-6 py-4 flex flex-col gap-4">
-                <Link to="/" className="no-underline text-white text-lg" onClick={() => setIsMobileMenuOpen(false)}>
+            <div className={`md:hidden fixed inset-0 ${'bg-neutral-700'} text-white z-30`}>
+              <div className="px-6 py-6 flex flex-col gap-6 mt-12">
+                <Link to="/" className="no-underline text-white text-2xl" onClick={() => setIsMobileMenuOpen(false)}>
                   Home
                 </Link>
-                <Link to="/about" className="no-underline text-white text-lg" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link to="/about" className="no-underline text-white text-2xl" onClick={() => setIsMobileMenuOpen(false)}>
                   About Us
                 </Link>
-                <Link to="/menu" className="no-underline text-white text-lg" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link to="/menu" className="no-underline text-white text-2xl" onClick={() => setIsMobileMenuOpen(false)}>
                   Menu
                 </Link>
-                <Link to="/contact" className="no-underline text-white text-lg" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link to="/contact" className="no-underline text-white text-2xl" onClick={() => setIsMobileMenuOpen(false)}>
                   Contact
                 </Link>
               </div>
