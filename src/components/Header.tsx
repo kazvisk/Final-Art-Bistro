@@ -41,16 +41,16 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
               The Art Bistro
             </Link>
             <div className="hidden md:flex gap-8">
-              <Link to="/" className={`${transparent ? 'text-white' : 'text-color-white-solid'} no-underline font-bold text-xl`}>
+              <Link to="/" className={`${transparent ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
                 Home
               </Link>
-              <Link to="/about" className={`${transparent ? 'text-white' : 'text-color-white-solid'} no-underline font-bold text-xl`}>
+              <Link to="/about" className={`${transparent ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
                 About Us
               </Link>
-              <Link to="/menu" className={`${transparent ? 'text-white' : 'text-color-white-solid'} no-underline font-bold text-xl`}>
+              <Link to="/menu" className={`${transparent ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
                 Menu
               </Link>
-              <Link to="/contact" className={`${transparent ? 'text-white' : 'text-color-white-solid'} no-underline font-bold text-xl`}>
+              <Link to="/contact" className={`${transparent ? 'text-white' : 'text-color-white-solid'} no-underline font-medium text-xl`}>
                 Contact
               </Link>
             </div>
