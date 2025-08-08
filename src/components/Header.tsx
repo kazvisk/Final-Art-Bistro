@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 0);
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -22,31 +22,17 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50">
-        {/* Announcement Bar */}
-        <div className={`${transparent ? 'border-transparent' : 'border-b border-gray-200'} bg-color-white-solid`}>
-          <div className="px-20 py-2 text-center">
-            <p className="text-sm text-color-black-solid font-medium">
-              Pickup orders can be made by phone call at{' '}
-              <a
-                href="tel:+14153797119"
-                className="text-amber-600 hover:text-amber-700 transition-colors"
-              >
-                (415) 379-7119
-              </a>{' '}
-              • We are a cash-only business
-            </p>
-          </div>
-        </div>
-
+      <div className="fixed top-12 left-0 right-0 z-40">
         {/* Primary Navigation */}
-        <nav className={`${
+        <nav
+          className={`px-20 transition-all duration-300 ${
             transparent
               ? isScrolled
-                ? 'bg-neutral-700/90 shadow-md'
-                : 'bg-transparent shadow-none'
-              : 'bg-neutral-700 shadow-md'
-          } px-20 py-8 transition-all duration-300 ease-out`}>
+                ? 'bg-neutral-700/90 backdrop-blur-sm shadow-md py-6'
+                : 'bg-transparent shadow-none py-8'
+              : 'bg-neutral-700 shadow-md py-8'
+          }`}
+        >
           <div className="flex justify-between items-center">
             <Link
               to="/"
@@ -80,8 +66,8 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
           </div>
           {isMobileMenuOpen && (
             <div className={`md:hidden absolute left-0 right-0 ${
-                transparent && !isScrolled ? 'bg-neutral-800/95' : 'bg-neutral-700'
-              } text-white shadow-lg transition-colors duration-300`}>
+              transparent && !isScrolled ? 'bg-neutral-800/95' : 'bg-neutral-700'
+            } text-white shadow-lg`}>
               <div className="px-6 py-4 flex flex-col gap-4">
                 <Link to="/" className="no-underline text-white text-lg" onClick={() => setIsMobileMenuOpen(false)}>
                   Home
@@ -100,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
           )}
         </nav>
       </div>
-      {/* Spacer to offset fixed header height on solid pages */}
+      {/* Spacer to offset fixed header height on solid pages (announcement bar + nav) */}
       <div className={transparent ? 'h-0' : 'h-[120px]'} />
     </>
   );
